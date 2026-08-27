@@ -1,0 +1,9 @@
+{
+  "name": "cinema-vox-clone",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev:server": "cd server && npm start",
+    "dev:client": "cd client && npm run dev"
+  }
+}

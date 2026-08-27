@@ -1,0 +1,3628 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Future_Admin",
+      "email": "future_admin",
+      "password": "$2a$10$ytlsXl7bftK9uL/79Mlpxu9Ga.hRx92.RChSZ1F4H4kVT.hmYC0pi",
+      "role": "admin",
+      "createdAt": "2026-08-23T01:38:43.078Z"
+    },
+    {
+      "id": 2,
+      "name": "Demo User",
+      "email": "user@seawaysuez.com",
+      "password": "$2a$10$jzD/Eoj4xHKUdmipmty0Veb1WKxF4IxEtZJefjah923tV.NTpsAyS",
+      "role": "user",
+      "createdAt": "2026-08-23T01:38:43.078Z"
+    },
+    {
+      "id": 3,
+      "name": "husseinali95777730",
+      "email": "husseinali95777730@gmail.com",
+      "password": null,
+      "role": "user",
+      "createdAt": "2026-08-23T01:57:07.607Z"
+    },
+    {
+      "id": 4,
+      "name": "QR Owner",
+      "email": "qr2@t.com",
+      "password": "$2a$10$yGZNNns039WGxkzFzqrbJuksDbAZeIlDtpPBJilHVzIf/xAvrBE0i",
+      "role": "user",
+      "createdAt": "2026-08-23T02:36:11.983Z"
+    },
+    {
+      "id": 5,
+      "name": "dev.hussein.ali",
+      "email": "dev.hussein.ali@gmail.com",
+      "password": null,
+      "role": "user",
+      "createdAt": "2026-08-23T02:50:36.780Z"
+    },
+    {
+      "id": 6,
+      "name": "Pay Debug",
+      "email": "paydbg@t.com",
+      "password": "$2a$10$/xy323tdWQVrdJ4qYDplsuPOu6E1rBL2mGBtx1ethqy2o5luhGjIW",
+      "role": "user",
+      "createdAt": "2026-08-23T02:53:52.244Z"
+    },
+    {
+      "id": 7,
+      "name": "Ahmed Mohamed",
+      "phone": "01223344556",
+      "password": "$2a$10$Vh62f/fSJwBHz8GBNf6E1u/1UR5rh.AB5YJFff6uaDNpjLBpdgBVi",
+      "role": "user",
+      "createdAt": "2026-08-23T22:09:36.495Z"
+    },
+    {
+      "id": 8,
+      "name": "حسين علي",
+      "phone": "01004494667",
+      "password": "$2a$10$g8IgUCVD5pomZ35xV2ZRGenQi7pHGOUnjXEmX02/caYkO8fpVwEGq",
+      "role": "user",
+      "createdAt": "2026-08-25T19:15:12.828Z"
+    },
+    {
+      "id": 11,
+      "name": "Hussein Ali",
+      "phone": "01004494677",
+      "password": "$2a$10$Ui38KMZ/ReOjEKtKvccuSufj504JJxyHJ5QgsX01KQpVA1wI/GMKe",
+      "role": "cashier",
+      "createdAt": "2026-08-26T21:23:41.303Z"
+    },
+    {
+      "id": 13,
+      "name": "TestUser1",
+      "phone": "01000001001",
+      "password": "$2a$10$seQyNM1OU0SIHHcmL4vBX.kaqIyGV/lnQncsG2ApZTZa2bSk711NC",
+      "role": "user",
+      "mustChangePassword": false,
+      "createdAt": "2026-08-26T23:09:09.363Z"
+    },
+    {
+      "id": 14,
+      "name": "TestUser2",
+      "phone": "01000001002",
+      "password": "$2a$10$lYdRCgOxyzjOvlGh.Ibihuj3ml3cmACURgXegtiktG0kehoDlSalu",
+      "role": "user",
+      "mustChangePassword": false,
+      "createdAt": "2026-08-26T23:09:09.481Z"
+    },
+    {
+      "id": 15,
+      "name": "TestUser3",
+      "phone": "01000001003",
+      "password": "$2a$10$AJREpMWTkfCzC3UZ2swkmexNbhI6ZnMlcuErmql8jgQ2H0BOF297.",
+      "role": "user",
+      "mustChangePassword": false,
+      "createdAt": "2026-08-26T23:09:09.604Z"
+    },
+    {
+      "id": 16,
+      "name": "TestUser4",
+      "phone": "01000001004",
+      "password": "$2a$10$LHf9v1ng2/kMge9FSyy3Heuq/AGZfZViXs98Z/xRZLLXzBBmwQ1uG",
+      "role": "user",
+      "mustChangePassword": false,
+      "createdAt": "2026-08-26T23:09:09.704Z"
+    },
+    {
+      "id": 17,
+      "name": "TestUser5",
+      "phone": "01000001005",
+      "password": "$2a$10$btIbldcNyuLS4pGZx9m1BegarwBspZdr.xzDp1./khzNorSdvTVYe",
+      "role": "user",
+      "mustChangePassword": false,
+      "createdAt": "2026-08-26T23:09:09.806Z"
+    },
+    {
+      "id": 18,
+      "name": "TestUser6",
+      "phone": "01000001006",
+      "password": "$2a$10$odL.51OoCVUM7OiqUn2y6Oh/4z/HVyQiT4QO0lXP4U0mP8t0yHVVe",
+      "role": "user",
+      "mustChangePassword": false,
+      "createdAt": "2026-08-26T23:09:09.903Z"
+    },
+    {
+      "id": 19,
+      "name": "TestUser7",
+      "phone": "01000001007",
+      "password": "$2a$10$jf0wcfS5eHrldljEvtRdouwpuQ/5p2x4psMnQZ9aKxUqYUbEK454G",
+      "role": "user",
+      "mustChangePassword": false,
+      "createdAt": "2026-08-26T23:09:09.994Z"
+    },
+    {
+      "id": 20,
+      "name": "TestUser8",
+      "phone": "01000001008",
+      "password": "$2a$10$9GIqxbHbRkNwCNWL5bmXceBPip02tOC/temrG.BD9UrIfsTy2998G",
+      "role": "user",
+      "mustChangePassword": false,
+      "createdAt": "2026-08-26T23:09:10.102Z"
+    },
+    {
+      "id": 21,
+      "name": "TestUser9",
+      "phone": "01000001009",
+      "password": "$2a$10$53phHWXLZkI9m0epKkbB8eMDXMXgb7ykIS2OHeuINugGXZRef5MrS",
+      "role": "user",
+      "mustChangePassword": false,
+      "createdAt": "2026-08-26T23:09:10.204Z"
+    },
+    {
+      "id": 22,
+      "name": "TestUser10",
+      "phone": "01000001010",
+      "password": "$2a$10$3OpAZck.AHJYd8FfPTRYMeFSkmvQzOWnbMNkvOD78e3vsBV5QBzOq",
+      "role": "user",
+      "mustChangePassword": false,
+      "createdAt": "2026-08-26T23:09:10.310Z"
+    },
+    {
+      "id": 23,
+      "name": "TestUser11",
+      "phone": "01000001011",
+      "password": "$2a$10$SJZxP/D2tHP8XCoxrQtX0Oo2j15OKKIx5YUCwsI1DNXadERMuBUCi",
+      "role": "user",
+      "mustChangePassword": false,
+      "createdAt": "2026-08-26T23:09:10.413Z"
+    },
+    {
+      "id": 24,
+      "name": "TestUser12",
+      "phone": "01000001012",
+      "password": "$2a$10$r0kpR4qyWhEZFH1VEByEm.AtmFv6vnKybUCkL6sVpoWn4/zZBN6LW",
+      "role": "user",
+      "mustChangePassword": false,
+      "createdAt": "2026-08-26T23:09:10.505Z"
+    },
+    {
+      "id": 25,
+      "name": "TestUser13",
+      "phone": "01000001013",
+      "password": "$2a$10$UQDXIuSF.aHS0zH3ctpXJOcVhdDntKtynqHI1Owlp85WsST2BMiAK",
+      "role": "user",
+      "mustChangePassword": false,
+      "createdAt": "2026-08-26T23:09:10.612Z"
+    },
+    {
+      "id": 26,
+      "name": "TestUser14",
+      "phone": "01000001014",
+      "password": "$2a$10$OrDB3TZWH8g0lXFViUR.lOMOU8IIuIi4Ne347JLRFc9nUXnOGtCbO",
+      "role": "user",
+      "mustChangePassword": false,
+      "createdAt": "2026-08-26T23:09:10.720Z"
+    },
+    {
+      "id": 27,
+      "name": "TestUser15",
+      "phone": "01000001015",
+      "password": "$2a$10$/NCUQQL/P2YvzRgMbsasm.skH5FjxXmUKJkJ8xJLqzvyfsVF2P5Oe",
+      "role": "user",
+      "mustChangePassword": false,
+      "createdAt": "2026-08-26T23:09:10.816Z"
+    },
+    {
+      "id": 28,
+      "name": "TestUser16",
+      "phone": "01000001016",
+      "password": "$2a$10$SVdNU21.Nou0kbXeMAs2O.xXRTI70I.8tck4HW7jafalXPIA9Zq5u",
+      "role": "user",
+      "mustChangePassword": false,
+      "createdAt": "2026-08-26T23:09:10.906Z"
+    },
+    {
+      "id": 29,
+      "name": "TestUser17",
+      "phone": "01000001017",
+      "password": "$2a$10$L0omlv9hPi9pj/bW1RRe1OA3UL7B7TzzBX7UdQh.FbfAsS7hkR5ti",
+      "role": "user",
+      "mustChangePassword": false,
+      "createdAt": "2026-08-26T23:09:11.021Z"
+    },
+    {
+      "id": 30,
+      "name": "TestUser18",
+      "phone": "01000001018",
+      "password": "$2a$10$PbunBQyic6l2WVPHFL4W.eKraAbL898XxCx1OmIx0Dp/.tdgg9bmW",
+      "role": "user",
+      "mustChangePassword": false,
+      "createdAt": "2026-08-26T23:09:11.120Z"
+    },
+    {
+      "id": 31,
+      "name": "TestUser19",
+      "phone": "01000001019",
+      "password": "$2a$10$3kUwW2kS9G83aqIoNQacYezzGW0eqQuzpcMJDmHnboR5tbEIEGbjq",
+      "role": "user",
+      "mustChangePassword": false,
+      "createdAt": "2026-08-26T23:09:11.212Z"
+    },
+    {
+      "id": 32,
+      "name": "TestUser20",
+      "phone": "01000001020",
+      "password": "$2a$10$vKylxsAG58b9KF5oC2wE.ewYG1BufPTvOMfUYibd4rx30fwBjDaYa",
+      "role": "user",
+      "mustChangePassword": false,
+      "createdAt": "2026-08-26T23:09:11.311Z"
+    }
+  ],
+  "movies": [
+    {
+      "id": "m1",
+      "gradient": [
+        "#6d28d9",
+        "#ec4899"
+      ],
+      "title": {
+        "en": "Spider-Man: Brand New Day",
+        "ar": "سبايدرمان: يوم جديد كلياً"
+      },
+      "lang": "en",
+      "description": {
+        "en": "It is a BRAND NEW DAY for Peter Parker. Fighting crime full-time as Spider-Man in a world that does not remember him, a powerful villain no one can even see threatens everything he loves.",
+        "ar": "إنه يوم جديد كلياً لبيتر باركر. يقاتل الجريمة بدوام كامل كسبايدرمان في عالم لا يتذكره، بينما يهدد شرير قوي لا يستطيع أحد رؤيته كل ما يحبه."
+      },
+      "genre": {
+        "en": "Action",
+        "ar": "أكشن"
+      },
+      "duration": 125,
+      "rating": 8.2,
+      "ageRating": "12+",
+      "status": "now_showing",
+      "cast": [
+        "Tom Holland",
+        "Zendaya",
+        "Peter Parker"
+      ],
+      "poster": "https://assets.voxcinemas.com/posters/P_HO00013065_1782227665332.jpg",
+      "featured": true,
+      "trailer": "https://www.youtube.com/watch?v=62bIsvRcPv0"
+    },
+    {
+      "id": "m2",
+      "gradient": [
+        "#1e3a8a",
+        "#22d3ee"
+      ],
+      "title": {
+        "en": "The Odyssey",
+        "ar": "الأوديسة"
+      },
+      "lang": "en",
+      "description": {
+        "en": "Christopher Nolan's mythic action epic shot across the world using brand new IMAX film technology, bringing Homer's foundational saga to the big screen.",
+        "ar": "ملحمة كريستوفر نولان الأسطورية المصورة حول العالم بتقنية IMAX الجديدة، ليعيد سرد ملحمة هوميروس الملحمية على الشاشة الكبيرة."
+      },
+      "genre": {
+        "en": "Adventure",
+        "ar": "مغامرة"
+      },
+      "duration": 165,
+      "rating": 8.8,
+      "ageRating": "16+",
+      "status": "now_showing",
+      "cast": [
+        "Matt Damon",
+        "Tom Holland",
+        "Anne Hathaway",
+        "Robert Pattinson",
+        "Zendaya"
+      ],
+      "poster": "https://assets.voxcinemas.com/posters/P_HO00013488_1783655908489.jpg",
+      "featured": true
+    },
+    {
+      "id": "m3",
+      "gradient": [
+        "#7c2d12",
+        "#ef4444"
+      ],
+      "title": {
+        "en": "Khali Balak Min Nafsik",
+        "ar": "خلي بالك من نفسك"
+      },
+      "lang": "ar",
+      "description": {
+        "en": "The story revolves around a couple who face numerous recurring disagreements and problems, leading them to a series of humorous and unexpected situations.",
+        "ar": "تدور القصة حول زوجين يواجهان خلافات ومشاكل متكررة، تقودهما إلى سلسلة من المواقف الطريفة وغير المتوقعة."
+      },
+      "genre": {
+        "en": "Comedy",
+        "ar": "كوميدي"
+      },
+      "duration": 100,
+      "rating": 7.4,
+      "ageRating": "12+",
+      "status": "now_showing",
+      "cast": [
+        "Ahmed Helmy",
+        "Mona Zaki"
+      ],
+      "poster": "https://assets.voxcinemas.com/posters/P_HO00013487_1784268069506.jpg"
+    },
+    {
+      "id": "m4",
+      "gradient": [
+        "#4a044e",
+        "#a855f7"
+      ],
+      "title": {
+        "en": "Sakr w Canaria",
+        "ar": "صقر وكنارية"
+      },
+      "lang": "ar",
+      "description": {
+        "en": "Saqr, a legendary mercenary, decides to leave his dangerous double life behind. An unexpected encounter with Bilal, a failed writer obsessed with espionage, turns his plans upside down.",
+        "ar": "يقرر صقر، المرتزق الأسطوري، ترك حياته المزدوجة الخطرة خلفه. لكن لقاءً غير متوقع مع بلال، الكاتب الفاشل المهووس بالجاسوسية، يقلب خططه رأساً على عقب."
+      },
+      "genre": {
+        "en": "Action",
+        "ar": "أكشن"
+      },
+      "duration": 110,
+      "rating": 7.1,
+      "ageRating": "16+",
+      "status": "now_showing",
+      "cast": [
+        "Karim Abdel Aziz",
+        "Khaled El Sawy"
+      ],
+      "poster": "https://assets.voxcinemas.com/posters/P_HO00013172_1780326269681.jpg"
+    },
+    {
+      "id": "m6",
+      "gradient": [
+        "#052e16",
+        "#84cc16"
+      ],
+      "title": {
+        "en": "7 Dogs",
+        "ar": "7dogs"
+      },
+      "lang": "ar",
+      "description": {
+        "en": "Interpol officer Khalid Al-Azzazi captures a senior member of a covert global crime syndicate known as \"7 Dogs\". When the organization resurfaces trafficking a new drug, Khalid is forced into an uneasy alliance.",
+        "ar": "يلقي ضابط الإنتربول خالد العزازي القبض على عضو بارز في شبكة إجرامية عالمية تُعرف باسم \"7 كلاب\". وعندما تعود المنظمة لتظهر مجدداً، يضطر خالد إلى تحالف صعب."
+      },
+      "genre": {
+        "en": "Action",
+        "ar": "أكشن"
+      },
+      "duration": 120,
+      "rating": 7.3,
+      "ageRating": "16+",
+      "status": "now_showing",
+      "cast": [
+        "Ahmed Ezz",
+        "Mohamed Mamdouh"
+      ],
+      "poster": "https://assets.voxcinemas.com/posters/P_HO00013128_1778076059712.jpg"
+    },
+    {
+      "id": "m7",
+      "gradient": [
+        "#312e81",
+        "#fb7185"
+      ],
+      "title": {
+        "en": "Toy Story 5",
+        "ar": "حكاية لعبة 5"
+      },
+      "lang": "en",
+      "description": {
+        "en": "Woody, Buzz, Jessie and the rest of the gang's jobs are challenged when they are introduced to electronics, a new threat to playtime.",
+        "ar": "تواجه وودي وباز وجيسي وباقي المجموعة تحدياً جديداً عندما يواجهون الأجهزة الإلكترونية، الخطر الجديد على وقت اللعب."
+      },
+      "genre": {
+        "en": "Animation",
+        "ar": "أنيميشن"
+      },
+      "duration": 100,
+      "rating": 7.8,
+      "ageRating": "PG",
+      "status": "now_showing",
+      "cast": [
+        "Tom Hanks",
+        "Tim Allen",
+        "Annie Potts"
+      ],
+      "poster": "https://assets.voxcinemas.com/posters/P_HO00013301_1783436274673.jpg"
+    },
+    {
+      "id": "m8",
+      "gradient": [
+        "#3b0764",
+        "#38bdf8"
+      ],
+      "title": {
+        "en": "Moana",
+        "ar": "موانا"
+      },
+      "lang": "en",
+      "description": {
+        "en": "Live-action adaptation of the 2016 Disney animated film Moana.",
+        "ar": "النسخة الواقعية من فيلم ديزني الكرتوني الشهير موانا الصادر عام 2016."
+      },
+      "genre": {
+        "en": "Animation",
+        "ar": "أنيميشن"
+      },
+      "duration": 105,
+      "rating": 7.5,
+      "ageRating": "PG",
+      "status": "now_showing",
+      "cast": [
+        "Catherine Laga'aia",
+        "Dwayne Johnson"
+      ],
+      "poster": "https://assets.voxcinemas.com/posters/P_HO00013063_1775409671373.jpg"
+    },
+    {
+      "id": "m9",
+      "gradient": [
+        "#450a0a",
+        "#fbbf24"
+      ],
+      "title": {
+        "en": "Visa",
+        "ar": "فيزا"
+      },
+      "lang": "ar",
+      "description": {
+        "en": "Four young Egyptians start their careers in marketing until a businessman persuades them to invest in a new digital currency and then defrauds them and escapes to America.",
+        "ar": "يبدأ أربعة شباب مصريين حياتهم المهنية في التسويق حتى يقنعهم رجل أعمال بالاستثمار في عملة رقمية جديدة، ثم يخدعهم ويهرب بأموالهم إلى أمريكا."
+      },
+      "genre": {
+        "en": "Comedy",
+        "ar": "كوميدي"
+      },
+      "duration": 100,
+      "rating": 7,
+      "ageRating": "G",
+      "status": "now_showing",
+      "cast": [
+        "Mohamed Ezz",
+        "Reham Abdelghafour"
+      ],
+      "poster": "https://assets.voxcinemas.com/posters/P_HO00013535_1785317447444.jpg"
+    },
+    {
+      "id": "m10",
+      "gradient": [
+        "#134e4a",
+        "#4ade80"
+      ],
+      "title": {
+        "en": "El Gawahergy",
+        "ar": "الجواهرجي"
+      },
+      "lang": "ar",
+      "description": {
+        "en": "Seif, a famous jeweler with a weakness for women, is forced to put his male pride aside when his strong-willed wife insists on building a healthier relationship.",
+        "ar": "يضطر سيف، الجواهرجي الشهير، إلى وضع كبريائه جانباً عندما تصر زوجته القوية على بناء علاقة أكثر صحة وتوازناً."
+      },
+      "genre": {
+        "en": "Comedy",
+        "ar": "كوميدي"
+      },
+      "duration": 110,
+      "rating": 6.8,
+      "ageRating": "G",
+      "status": "now_showing",
+      "cast": [
+        "Mohamed Henedy",
+        "Mona Zaki",
+        "Leb Leba"
+      ],
+      "poster": "https://assets.voxcinemas.com/posters/P_HO00012991_1784647227553.jpg"
+    },
+    {
+      "id": "m11",
+      "gradient": [
+        "#6d28d9",
+        "#ec4899"
+      ],
+      "title": {
+        "en": "Avengers: Doomsday",
+        "ar": "المنتقمون: يوم القيامة"
+      },
+      "lang": "en",
+      "description": {
+        "en": "Heroes from three different worlds must unite when they are thrust together to confront a catastrophic danger that could destroy everything they know.",
+        "ar": "يجب على أبطال من ثلاثة عوالم مختلفة أن يتحدوا عندما يواجهون خطراً كارثياً قد يدمر كل ما يعرفونه."
+      },
+      "genre": {
+        "en": "Action",
+        "ar": "أكشن"
+      },
+      "duration": 180,
+      "rating": 8.5,
+      "ageRating": "PG-13",
+      "status": "coming_soon",
+      "cast": [
+        "Chris Hemsworth",
+        "Robert Downey Jr",
+        "Chris Evans",
+        "Pedro Pascal"
+      ],
+      "poster": "https://assets.voxcinemas.com/posters/P_HO00013527_1784878779866.jpg",
+      "featured": true
+    },
+    {
+      "id": "m12",
+      "gradient": [
+        "#1e3a8a",
+        "#22d3ee"
+      ],
+      "title": {
+        "en": "The Get Out",
+        "ar": "الخروج"
+      },
+      "lang": "en",
+      "description": {
+        "en": "A nightclub owner on the verge of retiring finds himself squeezed by ruthless cartels and must navigate a deadly web of deception, power and survival.",
+        "ar": "يمتلك صاحب ملهى ليلي على وشك التقاعد نفسه محاصراً بين الكارتلات القاسية، وعليه اجتياز شبكة مميتة من الخداع والقوة والبقاء."
+      },
+      "genre": {
+        "en": "Action",
+        "ar": "أكشن"
+      },
+      "duration": 110,
+      "rating": 7.2,
+      "ageRating": "18+",
+      "status": "coming_soon",
+      "cast": [
+        "Russell Crowe",
+        "Aaron Paul",
+        "Luke Evans"
+      ],
+      "poster": "https://assets.voxcinemas.com/posters/P_HO00013360_1784878700095.jpg"
+    },
+    {
+      "id": "m13",
+      "gradient": [
+        "#7c2d12",
+        "#ef4444"
+      ],
+      "title": {
+        "en": "Ice Cream Man",
+        "ar": "رجل الآيس كريم"
+      },
+      "lang": "en",
+      "description": {
+        "en": "An idyllic summer town descends into madness when an ice cream man serves kids sweet delights with horrifying results.",
+        "ar": "تنزلق بلدة صيفية هادئة إلى الجنون عندما يقدم رجل الآيس كريم للأطفال حلويات بنتائج مرعبة."
+      },
+      "genre": {
+        "en": "Horror",
+        "ar": "رعب"
+      },
+      "duration": 100,
+      "rating": 6.6,
+      "ageRating": "18+",
+      "status": "coming_soon",
+      "cast": [
+        "Eli Roth",
+        "Ari Millen"
+      ],
+      "poster": "https://assets.voxcinemas.com/posters/P_HO00013340_1782227995321.jpg"
+    },
+    {
+      "id": "m14",
+      "gradient": [
+        "#4a044e",
+        "#a855f7"
+      ],
+      "title": {
+        "en": "Paw Patrol: The Dino Movie",
+        "ar": "فريق باو: فيلم الديناصورات"
+      },
+      "lang": "en",
+      "description": {
+        "en": "After their ship gets caught in a mysterious storm, the PAW Patrol pups crash land on an uncharted tropical island filled with dinosaurs.",
+        "ar": "بعد أن تعلق سفينتهم في عاصفة غامضة، تهبط فرقة باو باترول على جزيرة استوائية مجهولة مليئة بالديناصورات."
+      },
+      "genre": {
+        "en": "Animation",
+        "ar": "أنيميشن"
+      },
+      "duration": 95,
+      "rating": 7,
+      "ageRating": "PG",
+      "status": "coming_soon",
+      "cast": [
+        "McKenna Grace",
+        "Terry Crews"
+      ],
+      "poster": "https://assets.voxcinemas.com/posters/P_HO00013061_1775409765636.jpg"
+    },
+    {
+      "id": "m15",
+      "gradient": [
+        "#164e63",
+        "#f97316"
+      ],
+      "title": {
+        "en": "Insidious: Out Of The Further",
+        "ar": "سطوة: خارج الفيرذر"
+      },
+      "lang": "en",
+      "description": {
+        "en": "A young mother discovers she can travel into The Further, the purgatorial realm at the heart of the Insidious universe. Once the demons realize her power, our world becomes their playground.",
+        "ar": "تكتشف أم شابة أنها تستطيع السفر إلى \"الفيرذر\"، عالم الأرواح في قلب سلسلة سطوة. وعندما تدرك الشياطين قوتها، يصبح عالمنا ملعباً لها."
+      },
+      "genre": {
+        "en": "Horror",
+        "ar": "رعب"
+      },
+      "duration": 110,
+      "rating": 7.4,
+      "ageRating": "18+",
+      "status": "coming_soon",
+      "cast": [
+        "Amelia Eve",
+        "Brandon Perea"
+      ],
+      "poster": "https://assets.voxcinemas.com/posters/P_HO00013153_1779080015029.jpg"
+    },
+    {
+      "id": "m16",
+      "gradient": [
+        "#052e16",
+        "#84cc16"
+      ],
+      "title": {
+        "en": "El Set Lamma",
+        "ar": "الست لمة"
+      },
+      "lang": "ar",
+      "description": {
+        "en": "A media activist launches a campaign titled \"Women Have the Right to Veto\" to combat violence against women, in a social comedy full of humor and conflict.",
+        "ar": "تطلق ناشطة إعلامية حملة بعنوان \"الست ليها حق الفيتو\" لمكافحة العنف ضد المرأة، في كوميديا اجتماعية مليئة بالكوميديا والصراعات."
+      },
+      "genre": {
+        "en": "Comedy",
+        "ar": "كوميدي"
+      },
+      "duration": 115,
+      "rating": 6.7,
+      "ageRating": "PG",
+      "status": "coming_soon",
+      "cast": [
+        "Yousra",
+        "Yasmine Raeis",
+        "Dorra"
+      ],
+      "poster": "https://assets.voxcinemas.com/posters/P_HO00013514_1784268107226.jpg"
+    }
+  ],
+  "showtimes": [
+    {
+      "id": "st1",
+      "movieId": "m1",
+      "date": "2026-08-23",
+      "time": "12:00",
+      "hall": "3",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st2",
+      "movieId": "m1",
+      "date": "2026-08-23",
+      "time": "15:30",
+      "hall": "4",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st3",
+      "movieId": "m1",
+      "date": "2026-08-23",
+      "time": "18:45",
+      "hall": "1",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st4",
+      "movieId": "m1",
+      "date": "2026-08-23",
+      "time": "21:30",
+      "hall": "2",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st5",
+      "movieId": "m1",
+      "date": "2026-08-23",
+      "time": "23:59",
+      "hall": "3",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st6",
+      "movieId": "m1",
+      "date": "2026-08-24",
+      "time": "15:30",
+      "hall": "4",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st7",
+      "movieId": "m1",
+      "date": "2026-08-24",
+      "time": "18:45",
+      "hall": "1",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st8",
+      "movieId": "m1",
+      "date": "2026-08-24",
+      "time": "21:30",
+      "hall": "2",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st9",
+      "movieId": "m1",
+      "date": "2026-08-24",
+      "time": "23:59",
+      "hall": "3",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st10",
+      "movieId": "m1",
+      "date": "2026-08-24",
+      "time": "12:00",
+      "hall": "4",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st11",
+      "movieId": "m1",
+      "date": "2026-08-25",
+      "time": "18:45",
+      "hall": "1",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st12",
+      "movieId": "m1",
+      "date": "2026-08-25",
+      "time": "21:30",
+      "hall": "2",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st13",
+      "movieId": "m1",
+      "date": "2026-08-25",
+      "time": "23:59",
+      "hall": "3",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st14",
+      "movieId": "m1",
+      "date": "2026-08-25",
+      "time": "12:00",
+      "hall": "4",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st15",
+      "movieId": "m1",
+      "date": "2026-08-25",
+      "time": "15:30",
+      "hall": "1",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st16",
+      "movieId": "m1",
+      "date": "2026-08-26",
+      "time": "21:30",
+      "hall": "2",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st17",
+      "movieId": "m1",
+      "date": "2026-08-26",
+      "time": "23:59",
+      "hall": "3",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st18",
+      "movieId": "m1",
+      "date": "2026-08-26",
+      "time": "12:00",
+      "hall": "4",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st19",
+      "movieId": "m1",
+      "date": "2026-08-26",
+      "time": "15:30",
+      "hall": "1",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st20",
+      "movieId": "m1",
+      "date": "2026-08-26",
+      "time": "18:45",
+      "hall": "2",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st21",
+      "movieId": "m1",
+      "date": "2026-08-27",
+      "time": "23:59",
+      "hall": "3",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st22",
+      "movieId": "m1",
+      "date": "2026-08-27",
+      "time": "12:00",
+      "hall": "4",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st23",
+      "movieId": "m1",
+      "date": "2026-08-27",
+      "time": "15:30",
+      "hall": "1",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st24",
+      "movieId": "m1",
+      "date": "2026-08-27",
+      "time": "18:45",
+      "hall": "2",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st25",
+      "movieId": "m1",
+      "date": "2026-08-27",
+      "time": "21:30",
+      "hall": "3",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st26",
+      "movieId": "m2",
+      "date": "2026-08-23",
+      "time": "12:00",
+      "hall": "4",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st27",
+      "movieId": "m2",
+      "date": "2026-08-23",
+      "time": "15:30",
+      "hall": "1",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st28",
+      "movieId": "m2",
+      "date": "2026-08-23",
+      "time": "18:45",
+      "hall": "2",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st29",
+      "movieId": "m2",
+      "date": "2026-08-23",
+      "time": "21:30",
+      "hall": "3",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st30",
+      "movieId": "m2",
+      "date": "2026-08-23",
+      "time": "23:59",
+      "hall": "4",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st31",
+      "movieId": "m2",
+      "date": "2026-08-24",
+      "time": "15:30",
+      "hall": "1",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st32",
+      "movieId": "m2",
+      "date": "2026-08-24",
+      "time": "18:45",
+      "hall": "2",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st33",
+      "movieId": "m2",
+      "date": "2026-08-24",
+      "time": "21:30",
+      "hall": "3",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st34",
+      "movieId": "m2",
+      "date": "2026-08-24",
+      "time": "23:59",
+      "hall": "4",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st35",
+      "movieId": "m2",
+      "date": "2026-08-24",
+      "time": "12:00",
+      "hall": "1",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st36",
+      "movieId": "m2",
+      "date": "2026-08-25",
+      "time": "18:45",
+      "hall": "2",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st37",
+      "movieId": "m2",
+      "date": "2026-08-25",
+      "time": "21:30",
+      "hall": "3",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st38",
+      "movieId": "m2",
+      "date": "2026-08-25",
+      "time": "23:59",
+      "hall": "4",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st39",
+      "movieId": "m2",
+      "date": "2026-08-25",
+      "time": "12:00",
+      "hall": "1",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st40",
+      "movieId": "m2",
+      "date": "2026-08-25",
+      "time": "15:30",
+      "hall": "2",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st41",
+      "movieId": "m2",
+      "date": "2026-08-26",
+      "time": "21:30",
+      "hall": "3",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st42",
+      "movieId": "m2",
+      "date": "2026-08-26",
+      "time": "23:59",
+      "hall": "4",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st43",
+      "movieId": "m2",
+      "date": "2026-08-26",
+      "time": "12:00",
+      "hall": "1",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st44",
+      "movieId": "m2",
+      "date": "2026-08-26",
+      "time": "15:30",
+      "hall": "2",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st45",
+      "movieId": "m2",
+      "date": "2026-08-26",
+      "time": "18:45",
+      "hall": "3",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st46",
+      "movieId": "m2",
+      "date": "2026-08-27",
+      "time": "23:59",
+      "hall": "4",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st47",
+      "movieId": "m2",
+      "date": "2026-08-27",
+      "time": "12:00",
+      "hall": "1",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st48",
+      "movieId": "m2",
+      "date": "2026-08-27",
+      "time": "15:30",
+      "hall": "2",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st49",
+      "movieId": "m2",
+      "date": "2026-08-27",
+      "time": "18:45",
+      "hall": "3",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st50",
+      "movieId": "m2",
+      "date": "2026-08-27",
+      "time": "21:30",
+      "hall": "4",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st51",
+      "movieId": "m3",
+      "date": "2026-08-23",
+      "time": "12:00",
+      "hall": "1",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st52",
+      "movieId": "m3",
+      "date": "2026-08-23",
+      "time": "15:30",
+      "hall": "2",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st53",
+      "movieId": "m3",
+      "date": "2026-08-23",
+      "time": "18:45",
+      "hall": "3",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st54",
+      "movieId": "m3",
+      "date": "2026-08-23",
+      "time": "21:30",
+      "hall": "4",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st55",
+      "movieId": "m3",
+      "date": "2026-08-23",
+      "time": "23:59",
+      "hall": "1",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st56",
+      "movieId": "m3",
+      "date": "2026-08-24",
+      "time": "15:30",
+      "hall": "2",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st57",
+      "movieId": "m3",
+      "date": "2026-08-24",
+      "time": "18:45",
+      "hall": "3",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st58",
+      "movieId": "m3",
+      "date": "2026-08-24",
+      "time": "21:30",
+      "hall": "4",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st59",
+      "movieId": "m3",
+      "date": "2026-08-24",
+      "time": "23:59",
+      "hall": "1",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st60",
+      "movieId": "m3",
+      "date": "2026-08-24",
+      "time": "12:00",
+      "hall": "2",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st61",
+      "movieId": "m3",
+      "date": "2026-08-25",
+      "time": "18:45",
+      "hall": "3",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st62",
+      "movieId": "m3",
+      "date": "2026-08-25",
+      "time": "21:30",
+      "hall": "4",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st63",
+      "movieId": "m3",
+      "date": "2026-08-25",
+      "time": "23:59",
+      "hall": "1",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st64",
+      "movieId": "m3",
+      "date": "2026-08-25",
+      "time": "12:00",
+      "hall": "2",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st65",
+      "movieId": "m3",
+      "date": "2026-08-25",
+      "time": "15:30",
+      "hall": "3",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st66",
+      "movieId": "m3",
+      "date": "2026-08-26",
+      "time": "21:30",
+      "hall": "4",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st67",
+      "movieId": "m3",
+      "date": "2026-08-26",
+      "time": "23:59",
+      "hall": "1",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st68",
+      "movieId": "m3",
+      "date": "2026-08-26",
+      "time": "12:00",
+      "hall": "2",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st69",
+      "movieId": "m3",
+      "date": "2026-08-26",
+      "time": "15:30",
+      "hall": "3",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st70",
+      "movieId": "m3",
+      "date": "2026-08-26",
+      "time": "18:45",
+      "hall": "4",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st71",
+      "movieId": "m3",
+      "date": "2026-08-27",
+      "time": "23:59",
+      "hall": "1",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st72",
+      "movieId": "m3",
+      "date": "2026-08-27",
+      "time": "12:00",
+      "hall": "2",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st73",
+      "movieId": "m3",
+      "date": "2026-08-27",
+      "time": "15:30",
+      "hall": "3",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st74",
+      "movieId": "m3",
+      "date": "2026-08-27",
+      "time": "18:45",
+      "hall": "4",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st75",
+      "movieId": "m3",
+      "date": "2026-08-27",
+      "time": "21:30",
+      "hall": "1",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st76",
+      "movieId": "m4",
+      "date": "2026-08-23",
+      "time": "12:00",
+      "hall": "2",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st77",
+      "movieId": "m4",
+      "date": "2026-08-23",
+      "time": "15:30",
+      "hall": "3",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st78",
+      "movieId": "m4",
+      "date": "2026-08-23",
+      "time": "18:45",
+      "hall": "4",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st79",
+      "movieId": "m4",
+      "date": "2026-08-23",
+      "time": "21:30",
+      "hall": "1",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st80",
+      "movieId": "m4",
+      "date": "2026-08-23",
+      "time": "23:59",
+      "hall": "2",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st81",
+      "movieId": "m4",
+      "date": "2026-08-24",
+      "time": "15:30",
+      "hall": "3",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st82",
+      "movieId": "m4",
+      "date": "2026-08-24",
+      "time": "18:45",
+      "hall": "4",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st83",
+      "movieId": "m4",
+      "date": "2026-08-24",
+      "time": "21:30",
+      "hall": "1",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st84",
+      "movieId": "m4",
+      "date": "2026-08-24",
+      "time": "23:59",
+      "hall": "2",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st85",
+      "movieId": "m4",
+      "date": "2026-08-24",
+      "time": "12:00",
+      "hall": "3",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st86",
+      "movieId": "m4",
+      "date": "2026-08-25",
+      "time": "18:45",
+      "hall": "4",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st87",
+      "movieId": "m4",
+      "date": "2026-08-25",
+      "time": "21:30",
+      "hall": "1",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st88",
+      "movieId": "m4",
+      "date": "2026-08-25",
+      "time": "23:59",
+      "hall": "2",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st89",
+      "movieId": "m4",
+      "date": "2026-08-25",
+      "time": "12:00",
+      "hall": "3",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st90",
+      "movieId": "m4",
+      "date": "2026-08-25",
+      "time": "15:30",
+      "hall": "4",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st91",
+      "movieId": "m4",
+      "date": "2026-08-26",
+      "time": "21:30",
+      "hall": "1",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st92",
+      "movieId": "m4",
+      "date": "2026-08-26",
+      "time": "23:59",
+      "hall": "2",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st93",
+      "movieId": "m4",
+      "date": "2026-08-26",
+      "time": "12:00",
+      "hall": "3",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st94",
+      "movieId": "m4",
+      "date": "2026-08-26",
+      "time": "15:30",
+      "hall": "4",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st95",
+      "movieId": "m4",
+      "date": "2026-08-26",
+      "time": "18:45",
+      "hall": "1",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st96",
+      "movieId": "m4",
+      "date": "2026-08-27",
+      "time": "23:59",
+      "hall": "2",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st97",
+      "movieId": "m4",
+      "date": "2026-08-27",
+      "time": "12:00",
+      "hall": "3",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st98",
+      "movieId": "m4",
+      "date": "2026-08-27",
+      "time": "15:30",
+      "hall": "4",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st99",
+      "movieId": "m4",
+      "date": "2026-08-27",
+      "time": "18:45",
+      "hall": "1",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st100",
+      "movieId": "m4",
+      "date": "2026-08-27",
+      "time": "21:30",
+      "hall": "2",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st126",
+      "movieId": "m6",
+      "date": "2026-08-23",
+      "time": "12:00",
+      "hall": "4",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st127",
+      "movieId": "m6",
+      "date": "2026-08-23",
+      "time": "15:30",
+      "hall": "1",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st128",
+      "movieId": "m6",
+      "date": "2026-08-23",
+      "time": "18:45",
+      "hall": "2",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st129",
+      "movieId": "m6",
+      "date": "2026-08-23",
+      "time": "21:30",
+      "hall": "3",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st130",
+      "movieId": "m6",
+      "date": "2026-08-23",
+      "time": "23:59",
+      "hall": "4",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st131",
+      "movieId": "m6",
+      "date": "2026-08-24",
+      "time": "15:30",
+      "hall": "1",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st132",
+      "movieId": "m6",
+      "date": "2026-08-24",
+      "time": "18:45",
+      "hall": "2",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st133",
+      "movieId": "m6",
+      "date": "2026-08-24",
+      "time": "21:30",
+      "hall": "3",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st134",
+      "movieId": "m6",
+      "date": "2026-08-24",
+      "time": "23:59",
+      "hall": "4",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st135",
+      "movieId": "m6",
+      "date": "2026-08-24",
+      "time": "12:00",
+      "hall": "1",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st136",
+      "movieId": "m6",
+      "date": "2026-08-25",
+      "time": "18:45",
+      "hall": "2",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st137",
+      "movieId": "m6",
+      "date": "2026-08-25",
+      "time": "21:30",
+      "hall": "3",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st138",
+      "movieId": "m6",
+      "date": "2026-08-25",
+      "time": "23:59",
+      "hall": "4",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st139",
+      "movieId": "m6",
+      "date": "2026-08-25",
+      "time": "12:00",
+      "hall": "1",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st140",
+      "movieId": "m6",
+      "date": "2026-08-25",
+      "time": "15:30",
+      "hall": "2",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st141",
+      "movieId": "m6",
+      "date": "2026-08-26",
+      "time": "21:30",
+      "hall": "3",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st142",
+      "movieId": "m6",
+      "date": "2026-08-26",
+      "time": "23:59",
+      "hall": "4",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st143",
+      "movieId": "m6",
+      "date": "2026-08-26",
+      "time": "12:00",
+      "hall": "1",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st144",
+      "movieId": "m6",
+      "date": "2026-08-26",
+      "time": "15:30",
+      "hall": "2",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st145",
+      "movieId": "m6",
+      "date": "2026-08-26",
+      "time": "18:45",
+      "hall": "3",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st146",
+      "movieId": "m6",
+      "date": "2026-08-27",
+      "time": "23:59",
+      "hall": "4",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st147",
+      "movieId": "m6",
+      "date": "2026-08-27",
+      "time": "12:00",
+      "hall": "1",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st148",
+      "movieId": "m6",
+      "date": "2026-08-27",
+      "time": "15:30",
+      "hall": "2",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st149",
+      "movieId": "m6",
+      "date": "2026-08-27",
+      "time": "18:45",
+      "hall": "3",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st150",
+      "movieId": "m6",
+      "date": "2026-08-27",
+      "time": "21:30",
+      "hall": "4",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st151",
+      "movieId": "m7",
+      "date": "2026-08-23",
+      "time": "12:00",
+      "hall": "1",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st152",
+      "movieId": "m7",
+      "date": "2026-08-23",
+      "time": "15:30",
+      "hall": "2",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st153",
+      "movieId": "m7",
+      "date": "2026-08-23",
+      "time": "18:45",
+      "hall": "3",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st154",
+      "movieId": "m7",
+      "date": "2026-08-23",
+      "time": "21:30",
+      "hall": "4",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st155",
+      "movieId": "m7",
+      "date": "2026-08-23",
+      "time": "23:59",
+      "hall": "1",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st156",
+      "movieId": "m7",
+      "date": "2026-08-24",
+      "time": "15:30",
+      "hall": "2",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st157",
+      "movieId": "m7",
+      "date": "2026-08-24",
+      "time": "18:45",
+      "hall": "3",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st158",
+      "movieId": "m7",
+      "date": "2026-08-24",
+      "time": "21:30",
+      "hall": "4",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st159",
+      "movieId": "m7",
+      "date": "2026-08-24",
+      "time": "23:59",
+      "hall": "1",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st160",
+      "movieId": "m7",
+      "date": "2026-08-24",
+      "time": "12:00",
+      "hall": "2",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st161",
+      "movieId": "m7",
+      "date": "2026-08-25",
+      "time": "18:45",
+      "hall": "3",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st162",
+      "movieId": "m7",
+      "date": "2026-08-25",
+      "time": "21:30",
+      "hall": "4",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st163",
+      "movieId": "m7",
+      "date": "2026-08-25",
+      "time": "23:59",
+      "hall": "1",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st164",
+      "movieId": "m7",
+      "date": "2026-08-25",
+      "time": "12:00",
+      "hall": "2",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st165",
+      "movieId": "m7",
+      "date": "2026-08-25",
+      "time": "15:30",
+      "hall": "3",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st166",
+      "movieId": "m7",
+      "date": "2026-08-26",
+      "time": "21:30",
+      "hall": "4",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st167",
+      "movieId": "m7",
+      "date": "2026-08-26",
+      "time": "23:59",
+      "hall": "1",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st168",
+      "movieId": "m7",
+      "date": "2026-08-26",
+      "time": "12:00",
+      "hall": "2",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st169",
+      "movieId": "m7",
+      "date": "2026-08-26",
+      "time": "15:30",
+      "hall": "3",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st170",
+      "movieId": "m7",
+      "date": "2026-08-26",
+      "time": "18:45",
+      "hall": "4",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st171",
+      "movieId": "m7",
+      "date": "2026-08-27",
+      "time": "23:59",
+      "hall": "1",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st172",
+      "movieId": "m7",
+      "date": "2026-08-27",
+      "time": "12:00",
+      "hall": "2",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st173",
+      "movieId": "m7",
+      "date": "2026-08-27",
+      "time": "15:30",
+      "hall": "3",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st174",
+      "movieId": "m7",
+      "date": "2026-08-27",
+      "time": "18:45",
+      "hall": "4",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st175",
+      "movieId": "m7",
+      "date": "2026-08-27",
+      "time": "21:30",
+      "hall": "1",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st176",
+      "movieId": "m8",
+      "date": "2026-08-23",
+      "time": "12:00",
+      "hall": "2",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st177",
+      "movieId": "m8",
+      "date": "2026-08-23",
+      "time": "15:30",
+      "hall": "3",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st178",
+      "movieId": "m8",
+      "date": "2026-08-23",
+      "time": "18:45",
+      "hall": "4",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st179",
+      "movieId": "m8",
+      "date": "2026-08-23",
+      "time": "21:30",
+      "hall": "1",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st180",
+      "movieId": "m8",
+      "date": "2026-08-23",
+      "time": "23:59",
+      "hall": "2",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st181",
+      "movieId": "m8",
+      "date": "2026-08-24",
+      "time": "15:30",
+      "hall": "3",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st182",
+      "movieId": "m8",
+      "date": "2026-08-24",
+      "time": "18:45",
+      "hall": "4",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st183",
+      "movieId": "m8",
+      "date": "2026-08-24",
+      "time": "21:30",
+      "hall": "1",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st184",
+      "movieId": "m8",
+      "date": "2026-08-24",
+      "time": "23:59",
+      "hall": "2",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st185",
+      "movieId": "m8",
+      "date": "2026-08-24",
+      "time": "12:00",
+      "hall": "3",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st186",
+      "movieId": "m8",
+      "date": "2026-08-25",
+      "time": "18:45",
+      "hall": "4",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st187",
+      "movieId": "m8",
+      "date": "2026-08-25",
+      "time": "21:30",
+      "hall": "1",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st188",
+      "movieId": "m8",
+      "date": "2026-08-25",
+      "time": "23:59",
+      "hall": "2",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st189",
+      "movieId": "m8",
+      "date": "2026-08-25",
+      "time": "12:00",
+      "hall": "3",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st190",
+      "movieId": "m8",
+      "date": "2026-08-25",
+      "time": "15:30",
+      "hall": "4",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st191",
+      "movieId": "m8",
+      "date": "2026-08-26",
+      "time": "21:30",
+      "hall": "1",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st192",
+      "movieId": "m8",
+      "date": "2026-08-26",
+      "time": "23:59",
+      "hall": "2",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st193",
+      "movieId": "m8",
+      "date": "2026-08-26",
+      "time": "12:00",
+      "hall": "3",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st194",
+      "movieId": "m8",
+      "date": "2026-08-26",
+      "time": "15:30",
+      "hall": "4",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st195",
+      "movieId": "m8",
+      "date": "2026-08-26",
+      "time": "18:45",
+      "hall": "1",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st196",
+      "movieId": "m8",
+      "date": "2026-08-27",
+      "time": "23:59",
+      "hall": "2",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st197",
+      "movieId": "m8",
+      "date": "2026-08-27",
+      "time": "12:00",
+      "hall": "3",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st198",
+      "movieId": "m8",
+      "date": "2026-08-27",
+      "time": "15:30",
+      "hall": "4",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st199",
+      "movieId": "m8",
+      "date": "2026-08-27",
+      "time": "18:45",
+      "hall": "1",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st200",
+      "movieId": "m8",
+      "date": "2026-08-27",
+      "time": "21:30",
+      "hall": "2",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st201",
+      "movieId": "m9",
+      "date": "2026-08-23",
+      "time": "12:00",
+      "hall": "3",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st202",
+      "movieId": "m9",
+      "date": "2026-08-23",
+      "time": "15:30",
+      "hall": "4",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st203",
+      "movieId": "m9",
+      "date": "2026-08-23",
+      "time": "18:45",
+      "hall": "1",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st204",
+      "movieId": "m9",
+      "date": "2026-08-23",
+      "time": "21:30",
+      "hall": "2",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st205",
+      "movieId": "m9",
+      "date": "2026-08-23",
+      "time": "23:59",
+      "hall": "3",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st206",
+      "movieId": "m9",
+      "date": "2026-08-24",
+      "time": "15:30",
+      "hall": "4",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st207",
+      "movieId": "m9",
+      "date": "2026-08-24",
+      "time": "18:45",
+      "hall": "1",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st208",
+      "movieId": "m9",
+      "date": "2026-08-24",
+      "time": "21:30",
+      "hall": "2",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st209",
+      "movieId": "m9",
+      "date": "2026-08-24",
+      "time": "23:59",
+      "hall": "3",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st210",
+      "movieId": "m9",
+      "date": "2026-08-24",
+      "time": "12:00",
+      "hall": "4",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st211",
+      "movieId": "m9",
+      "date": "2026-08-25",
+      "time": "18:45",
+      "hall": "1",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st212",
+      "movieId": "m9",
+      "date": "2026-08-25",
+      "time": "21:30",
+      "hall": "2",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st213",
+      "movieId": "m9",
+      "date": "2026-08-25",
+      "time": "23:59",
+      "hall": "3",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st214",
+      "movieId": "m9",
+      "date": "2026-08-25",
+      "time": "12:00",
+      "hall": "4",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st215",
+      "movieId": "m9",
+      "date": "2026-08-25",
+      "time": "15:30",
+      "hall": "1",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st216",
+      "movieId": "m9",
+      "date": "2026-08-26",
+      "time": "21:30",
+      "hall": "2",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st217",
+      "movieId": "m9",
+      "date": "2026-08-26",
+      "time": "23:59",
+      "hall": "3",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st218",
+      "movieId": "m9",
+      "date": "2026-08-26",
+      "time": "12:00",
+      "hall": "4",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st219",
+      "movieId": "m9",
+      "date": "2026-08-26",
+      "time": "15:30",
+      "hall": "1",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st220",
+      "movieId": "m9",
+      "date": "2026-08-26",
+      "time": "18:45",
+      "hall": "2",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st221",
+      "movieId": "m9",
+      "date": "2026-08-27",
+      "time": "23:59",
+      "hall": "3",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st222",
+      "movieId": "m9",
+      "date": "2026-08-27",
+      "time": "12:00",
+      "hall": "4",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st223",
+      "movieId": "m9",
+      "date": "2026-08-27",
+      "time": "15:30",
+      "hall": "1",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st224",
+      "movieId": "m9",
+      "date": "2026-08-27",
+      "time": "18:45",
+      "hall": "2",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st225",
+      "movieId": "m9",
+      "date": "2026-08-27",
+      "time": "21:30",
+      "hall": "3",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st226",
+      "movieId": "m10",
+      "date": "2026-08-23",
+      "time": "12:00",
+      "hall": "4",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st227",
+      "movieId": "m10",
+      "date": "2026-08-23",
+      "time": "15:30",
+      "hall": "1",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st228",
+      "movieId": "m10",
+      "date": "2026-08-23",
+      "time": "18:45",
+      "hall": "2",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st229",
+      "movieId": "m10",
+      "date": "2026-08-23",
+      "time": "21:30",
+      "hall": "3",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st230",
+      "movieId": "m10",
+      "date": "2026-08-23",
+      "time": "23:59",
+      "hall": "4",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st231",
+      "movieId": "m10",
+      "date": "2026-08-24",
+      "time": "15:30",
+      "hall": "1",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st232",
+      "movieId": "m10",
+      "date": "2026-08-24",
+      "time": "18:45",
+      "hall": "2",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st233",
+      "movieId": "m10",
+      "date": "2026-08-24",
+      "time": "21:30",
+      "hall": "3",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st234",
+      "movieId": "m10",
+      "date": "2026-08-24",
+      "time": "23:59",
+      "hall": "4",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st235",
+      "movieId": "m10",
+      "date": "2026-08-24",
+      "time": "12:00",
+      "hall": "1",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st236",
+      "movieId": "m10",
+      "date": "2026-08-25",
+      "time": "18:45",
+      "hall": "2",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st237",
+      "movieId": "m10",
+      "date": "2026-08-25",
+      "time": "21:30",
+      "hall": "3",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st238",
+      "movieId": "m10",
+      "date": "2026-08-25",
+      "time": "23:59",
+      "hall": "4",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st239",
+      "movieId": "m10",
+      "date": "2026-08-25",
+      "time": "12:00",
+      "hall": "1",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st240",
+      "movieId": "m10",
+      "date": "2026-08-25",
+      "time": "15:30",
+      "hall": "2",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st241",
+      "movieId": "m10",
+      "date": "2026-08-26",
+      "time": "21:30",
+      "hall": "3",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st242",
+      "movieId": "m10",
+      "date": "2026-08-26",
+      "time": "23:59",
+      "hall": "4",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st243",
+      "movieId": "m10",
+      "date": "2026-08-26",
+      "time": "12:00",
+      "hall": "1",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st244",
+      "movieId": "m10",
+      "date": "2026-08-26",
+      "time": "15:30",
+      "hall": "2",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st245",
+      "movieId": "m10",
+      "date": "2026-08-26",
+      "time": "18:45",
+      "hall": "3",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st246",
+      "movieId": "m10",
+      "date": "2026-08-27",
+      "time": "23:59",
+      "hall": "4",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st247",
+      "movieId": "m10",
+      "date": "2026-08-27",
+      "time": "12:00",
+      "hall": "1",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st248",
+      "movieId": "m10",
+      "date": "2026-08-27",
+      "time": "15:30",
+      "hall": "2",
+      "format": "2D",
+      "price": 100
+    },
+    {
+      "id": "st249",
+      "movieId": "m10",
+      "date": "2026-08-27",
+      "time": "18:45",
+      "hall": "3",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st250",
+      "movieId": "m10",
+      "date": "2026-08-27",
+      "time": "21:30",
+      "hall": "4",
+      "format": "IMAX",
+      "price": 150
+    },
+    {
+      "id": "st251",
+      "movieId": "m3",
+      "date": "2026-12-12",
+      "time": "19:00",
+      "hall": "1",
+      "format": "3D",
+      "price": 120
+    },
+    {
+      "id": "st252",
+      "movieId": "m1",
+      "date": "2026-09-03",
+      "time": "18:00",
+      "hall": "1",
+      "format": "2D",
+      "price": 25
+    },
+    {
+      "id": "st254",
+      "movieId": "m11",
+      "date": "2026-12-17",
+      "time": "18:00",
+      "hall": "1",
+      "format": "IMAX",
+      "price": 300
+    },
+    {
+      "id": "st255",
+      "movieId": "m2",
+      "date": "2027-12-21",
+      "time": "18:00",
+      "hall": "1",
+      "format": "2D",
+      "price": 100
+    }
+  ],
+  "bookings": [
+    {
+      "id": "bk1",
+      "userId": 3,
+      "showtimeId": "st1",
+      "movieId": "m1",
+      "date": "2026-08-23",
+      "time": "12:00",
+      "hall": "3",
+      "format": "IMAX",
+      "seats": [
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "D5",
+        "D6",
+        "D7",
+        "D8"
+      ],
+      "seatPrice": 100,
+      "serviceFee": 50,
+      "total": 850,
+      "status": "cancelled",
+      "paymentAttempts": 1,
+      "paymobOrderId": "593064324",
+      "createdAt": "2026-08-23T01:57:33.628Z"
+    },
+    {
+      "id": "bk2",
+      "userId": 4,
+      "showtimeId": "st101",
+      "movieId": "m5",
+      "date": "2026-08-23",
+      "time": "12:00",
+      "hall": "3",
+      "format": "2D",
+      "seats": [
+        "F3",
+        "F4"
+      ],
+      "seatPrice": 100,
+      "serviceFee": 50,
+      "total": 250,
+      "status": "cancelled",
+      "paymentAttempts": 1,
+      "paymobOrderId": "593069103",
+      "createdAt": "2026-08-23T02:36:12.071Z"
+    },
+    {
+      "id": "bk3",
+      "userId": 3,
+      "showtimeId": "st1",
+      "movieId": "m1",
+      "date": "2026-08-23",
+      "time": "12:00",
+      "hall": "3",
+      "format": "IMAX",
+      "seats": [
+        "E5",
+        "E6",
+        "E7",
+        "F5",
+        "F6",
+        "F7"
+      ],
+      "seatPrice": 100,
+      "serviceFee": 50,
+      "total": 650,
+      "status": "cancelled",
+      "paymentAttempts": 1,
+      "paymobOrderId": "593069543",
+      "createdAt": "2026-08-23T02:39:40.372Z"
+    },
+    {
+      "id": "bk4",
+      "userId": 1,
+      "showtimeId": "st66",
+      "movieId": "m3",
+      "date": "2026-08-26",
+      "time": "21:30",
+      "hall": "4",
+      "format": "3D",
+      "seats": [
+        "E5",
+        "E6"
+      ],
+      "seatPrice": 100,
+      "serviceFee": 50,
+      "total": 250,
+      "status": "cancelled",
+      "paymentAttempts": 1,
+      "paymobOrderId": null,
+      "createdAt": "2026-08-23T02:44:14.918Z"
+    },
+    {
+      "id": "bk5",
+      "userId": 1,
+      "showtimeId": "st66",
+      "movieId": "m3",
+      "date": "2026-08-26",
+      "time": "21:30",
+      "hall": "4",
+      "format": "3D",
+      "seats": [
+        "E5",
+        "E6"
+      ],
+      "seatPrice": 100,
+      "serviceFee": 50,
+      "total": 250,
+      "status": "cancelled",
+      "paymentAttempts": 1,
+      "paymobOrderId": null,
+      "createdAt": "2026-08-23T02:44:18.130Z"
+    },
+    {
+      "id": "bk6",
+      "userId": 1,
+      "showtimeId": "st69",
+      "movieId": "m3",
+      "date": "2026-08-26",
+      "time": "15:30",
+      "hall": "3",
+      "format": "3D",
+      "seats": [
+        "E5",
+        "E6",
+        "F10"
+      ],
+      "seatPrice": 100,
+      "serviceFee": 50,
+      "total": 350,
+      "status": "cancelled",
+      "paymentAttempts": 1,
+      "paymobOrderId": null,
+      "createdAt": "2026-08-23T02:44:24.462Z"
+    },
+    {
+      "id": "bk7",
+      "userId": 5,
+      "showtimeId": "st31",
+      "movieId": "m2",
+      "date": "2026-08-24",
+      "time": "15:30",
+      "hall": "1",
+      "format": "IMAX",
+      "seats": [
+        "E5",
+        "E6"
+      ],
+      "seatPrice": 100,
+      "serviceFee": 50,
+      "total": 250,
+      "status": "cancelled",
+      "paymentAttempts": 1,
+      "paymobOrderId": null,
+      "createdAt": "2026-08-23T02:51:08.883Z"
+    },
+    {
+      "id": "bk8",
+      "userId": 5,
+      "showtimeId": "st31",
+      "movieId": "m2",
+      "date": "2026-08-24",
+      "time": "15:30",
+      "hall": "1",
+      "format": "IMAX",
+      "seats": [
+        "E5",
+        "E6"
+      ],
+      "seatPrice": 100,
+      "serviceFee": 50,
+      "total": 250,
+      "status": "cancelled",
+      "paymentAttempts": 1,
+      "paymobOrderId": null,
+      "createdAt": "2026-08-23T02:53:27.747Z"
+    },
+    {
+      "id": "bk9",
+      "userId": 6,
+      "showtimeId": "st51",
+      "movieId": "m3",
+      "date": "2026-08-23",
+      "time": "12:00",
+      "hall": "1",
+      "format": "3D",
+      "seats": [
+        "G7"
+      ],
+      "seatPrice": 100,
+      "serviceFee": 50,
+      "total": 150,
+      "status": "cancelled",
+      "paymentAttempts": 1,
+      "paymobOrderId": null,
+      "createdAt": "2026-08-23T02:53:52.382Z"
+    },
+    {
+      "id": "bk10",
+      "userId": 5,
+      "showtimeId": "st5",
+      "movieId": "m1",
+      "date": "2026-08-23",
+      "time": "23:59",
+      "hall": "3",
+      "format": "2D",
+      "seats": [
+        "F8",
+        "F9"
+      ],
+      "seatPrice": 100,
+      "serviceFee": 50,
+      "total": 250,
+      "status": "cancelled",
+      "paymentAttempts": 1,
+      "paymobOrderId": null,
+      "createdAt": "2026-08-23T02:54:24.297Z"
+    },
+    {
+      "id": "bk11",
+      "userId": 5,
+      "showtimeId": "st5",
+      "movieId": "m1",
+      "date": "2026-08-23",
+      "time": "23:59",
+      "hall": "3",
+      "format": "2D",
+      "seats": [
+        "F8",
+        "F9"
+      ],
+      "seatPrice": 100,
+      "serviceFee": 50,
+      "total": 250,
+      "status": "cancelled",
+      "paymentAttempts": 1,
+      "paymobOrderId": null,
+      "createdAt": "2026-08-23T02:54:41.509Z"
+    },
+    {
+      "id": "bk12",
+      "userId": 5,
+      "showtimeId": "st5",
+      "movieId": "m1",
+      "date": "2026-08-23",
+      "time": "23:59",
+      "hall": "3",
+      "format": "2D",
+      "seats": [
+        "F8",
+        "F9"
+      ],
+      "seatPrice": 100,
+      "serviceFee": 50,
+      "total": 250,
+      "status": "cancelled",
+      "paymentAttempts": 1,
+      "paymobOrderId": null,
+      "createdAt": "2026-08-23T02:54:43.364Z"
+    },
+    {
+      "id": "bk13",
+      "customerName": "Hussein Ali Test",
+      "customerPhone": "01556934667",
+      "showtimeId": "st51",
+      "movieId": "m3",
+      "date": "2026-08-23",
+      "time": "12:00",
+      "hall": "1",
+      "format": "3D",
+      "seats": [
+        "H5"
+      ],
+      "seatPrice": 100,
+      "serviceFee": 50,
+      "total": 150,
+      "status": "cancelled",
+      "paymentAttempts": 1,
+      "paymobOrderId": null,
+      "createdAt": "2026-08-23T03:20:09.408Z"
+    },
+    {
+      "id": "bk14",
+      "customerName": "Hussein Ali",
+      "customerPhone": "01556934667",
+      "showtimeId": "st51",
+      "movieId": "m3",
+      "date": "2026-08-23",
+      "time": "12:00",
+      "hall": "1",
+      "format": "3D",
+      "seats": [
+        "H11"
+      ],
+      "seatPrice": 100,
+      "serviceFee": 50,
+      "total": 150,
+      "status": "cancelled",
+      "paymentAttempts": 1,
+      "paymobOrderId": "593469104",
+      "createdAt": "2026-08-23T17:19:19.693Z",
+      "lastInquiryAt": "2026-08-23T17:21:06.464Z"
+    },
+    {
+      "id": "bk15",
+      "customerName": "Full Test Run",
+      "customerPhone": "01004494667",
+      "showtimeId": "st1",
+      "movieId": "m1",
+      "date": "2026-08-23",
+      "time": "12:00",
+      "hall": "3",
+      "format": "IMAX",
+      "seats": [
+        "A1"
+      ],
+      "seatPrice": 100,
+      "serviceFee": 50,
+      "total": 150,
+      "status": "cancelled",
+      "paymentAttempts": 1,
+      "paymobOrderId": "593671664",
+      "createdAt": "2026-08-23T21:51:48.163Z",
+      "lastInquiryAt": "2026-08-23T21:52:28.482Z"
+    },
+    {
+      "id": "bk16",
+      "userId": 7,
+      "customerName": "Ahmed Mohamed",
+      "customerPhone": "01223344556",
+      "showtimeId": "st26",
+      "movieId": "m2",
+      "date": "2026-08-23",
+      "time": "12:00",
+      "hall": "4",
+      "format": "2D",
+      "seats": [
+        "B2"
+      ],
+      "seatPrice": 100,
+      "serviceFee": 50,
+      "total": 150,
+      "status": "cancelled",
+      "paymentAttempts": 1,
+      "paymobOrderId": "593679595",
+      "createdAt": "2026-08-23T22:09:36.956Z",
+      "lastInquiryAt": "2026-08-23T22:09:39.119Z"
+    },
+    {
+      "id": "bk17",
+      "userId": 1,
+      "customerName": "Seaway Admin",
+      "customerPhone": "01004494667",
+      "showtimeId": "st11",
+      "movieId": "m1",
+      "date": "2026-08-25",
+      "time": "18:45",
+      "hall": "1",
+      "format": "2D",
+      "seats": [
+        "C9"
+      ],
+      "seatPrice": 100,
+      "serviceFee": 50,
+      "total": 150,
+      "status": "cancelled",
+      "paymentAttempts": 1,
+      "paymobOrderId": null,
+      "createdAt": "2026-08-25T19:07:11.971Z"
+    },
+    {
+      "id": "bk18",
+      "userId": 8,
+      "customerName": "حسين علي",
+      "customerPhone": "01004494667",
+      "showtimeId": "st11",
+      "movieId": "m1",
+      "date": "2026-08-25",
+      "time": "18:45",
+      "hall": "1",
+      "format": "2D",
+      "seats": [
+        "E6",
+        "E7"
+      ],
+      "seatPrice": 100,
+      "serviceFee": 50,
+      "total": 250,
+      "status": "cancelled",
+      "paymentAttempts": 1,
+      "paymobOrderId": null,
+      "createdAt": "2026-08-25T19:15:25.907Z"
+    },
+    {
+      "id": "bk19",
+      "userId": 8,
+      "customerName": "حسين علي",
+      "customerPhone": "01004494667",
+      "showtimeId": "st11",
+      "movieId": "m1",
+      "date": "2026-08-25",
+      "time": "18:45",
+      "hall": "1",
+      "format": "2D",
+      "seats": [
+        "E6",
+        "E7"
+      ],
+      "seatPrice": 100,
+      "serviceFee": 50,
+      "total": 250,
+      "status": "cancelled",
+      "paymentAttempts": 1,
+      "paymobOrderId": null,
+      "createdAt": "2026-08-25T19:15:32.634Z"
+    },
+    {
+      "id": "bk20",
+      "userId": 1,
+      "customerName": "Seaway Admin",
+      "customerPhone": "01004494667",
+      "showtimeId": "st245",
+      "movieId": "m10",
+      "date": "2026-08-26",
+      "time": "18:45",
+      "hall": "3",
+      "format": "2D",
+      "seats": [
+        "G11"
+      ],
+      "seatPrice": 100,
+      "serviceFee": 50,
+      "total": 150,
+      "status": "cancelled",
+      "paymentAttempts": 1,
+      "paymobOrderId": "595507215",
+      "createdAt": "2026-08-26T15:06:43.976Z"
+    },
+    {
+      "id": "bk21",
+      "userId": 1,
+      "customerName": "Future_Admin",
+      "customerPhone": "01004494667",
+      "showtimeId": "st95",
+      "movieId": "m4",
+      "date": "2026-08-26",
+      "time": "18:45",
+      "hall": "1",
+      "format": "2D",
+      "seats": [
+        "G7"
+      ],
+      "seatPrice": 100,
+      "serviceFee": 50,
+      "total": 150,
+      "status": "cancelled",
+      "paymentAttempts": 1,
+      "paymobOrderId": "595542016",
+      "createdAt": "2026-08-26T15:51:52.359Z",
+      "lastInquiryAt": "2026-08-26T15:52:11.052Z"
+    },
+    {
+      "id": "bk22",
+      "userId": null,
+      "customerName": "Cash Test",
+      "customerPhone": "01012345678",
+      "showtimeId": "st1",
+      "movieId": "m1",
+      "date": "2026-08-23",
+      "time": "12:00",
+      "hall": "3",
+      "format": "IMAX",
+      "seats": [
+        "H1"
+      ],
+      "seatPrice": 100,
+      "serviceFee": 0,
+      "total": 100,
+      "status": "confirmed",
+      "paymentMethod": "cash",
+      "paidAmount": 150,
+      "change": 50,
+      "createdAt": "2026-08-26T16:02:35.820Z",
+      "paidAt": "2026-08-26T16:02:35.820Z",
+      "source": "cashier",
+      "cashierId": 1
+    },
+    {
+      "id": "bk23",
+      "userId": null,
+      "customerName": "Visa Test",
+      "customerPhone": "01012345679",
+      "showtimeId": "st2",
+      "movieId": "m1",
+      "date": "2026-08-23",
+      "time": "15:30",
+      "hall": "4",
+      "format": "2D",
+      "seats": [
+        "H2"
+      ],
+      "seatPrice": 100,
+      "serviceFee": 0,
+      "total": 100,
+      "status": "confirmed",
+      "paymentMethod": "visa",
+      "paidAmount": 100,
+      "change": 0,
+      "createdAt": "2026-08-26T16:03:03.533Z",
+      "paidAt": "2026-08-26T16:03:03.533Z",
+      "source": "cashier",
+      "cashierId": 1
+    },
+    {
+      "id": "bk24",
+      "userId": null,
+      "customerName": "علي",
+      "customerPhone": null,
+      "showtimeId": "st216",
+      "movieId": "m9",
+      "date": "2026-08-26",
+      "time": "21:30",
+      "hall": "2",
+      "format": "3D",
+      "seats": [
+        "A5"
+      ],
+      "seatPrice": 100,
+      "serviceFee": 0,
+      "total": 100,
+      "status": "confirmed",
+      "paymentMethod": "cash",
+      "paidAmount": 100,
+      "change": 0,
+      "createdAt": "2026-08-26T21:13:22.744Z",
+      "paidAt": "2026-08-26T21:13:22.744Z",
+      "source": "cashier",
+      "cashierId": 1
+    },
+    {
+      "id": "bk25",
+      "userId": null,
+      "customerName": "حسين",
+      "customerPhone": "01004494667",
+      "showtimeId": "st16",
+      "movieId": "m1",
+      "date": "2026-08-26",
+      "time": "21:30",
+      "hall": "2",
+      "format": "IMAX",
+      "seats": [
+        "D8"
+      ],
+      "seatPrice": 100,
+      "serviceFee": 0,
+      "total": 100,
+      "status": "confirmed",
+      "paymentMethod": "cash",
+      "paidAmount": 311,
+      "change": 211,
+      "createdAt": "2026-08-26T21:15:27.623Z",
+      "paidAt": "2026-08-26T21:15:27.623Z",
+      "source": "cashier",
+      "cashierId": 1
+    },
+    {
+      "id": "bk27",
+      "userId": null,
+      "customerName": "Test XPay",
+      "customerPhone": "01012345678",
+      "showtimeId": "st1",
+      "movieId": "m1",
+      "date": "2026-08-23",
+      "time": "12:00",
+      "hall": "3",
+      "format": "IMAX",
+      "seats": [
+        "C1"
+      ],
+      "seatPrice": 100,
+      "serviceFee": 50,
+      "total": 150,
+      "status": "cancelled",
+      "paymentAttempts": 1,
+      "paymobOrderId": null,
+      "xpaySessionId": null,
+      "createdAt": "2026-08-26T22:25:52.313Z"
+    },
+    {
+      "id": "bk28",
+      "userId": null,
+      "customerName": "Test XPay Final",
+      "customerPhone": "01012345671",
+      "showtimeId": "st1",
+      "movieId": "m1",
+      "date": "2026-08-23",
+      "time": "12:00",
+      "hall": "3",
+      "format": "IMAX",
+      "seats": [
+        "C5"
+      ],
+      "seatPrice": 100,
+      "serviceFee": 50,
+      "total": 150,
+      "status": "confirmed",
+      "paymentAttempts": 0,
+      "paymobOrderId": null,
+      "xpaySessionId": null,
+      "createdAt": "2026-08-26T22:29:49.513Z"
+    },
+    {
+      "id": "bk29",
+      "userId": 1,
+      "customerName": "Future_Admin",
+      "customerPhone": "01023456789",
+      "showtimeId": "st69",
+      "movieId": "m3",
+      "date": "2026-08-26",
+      "time": "15:30",
+      "hall": "3",
+      "format": "3D",
+      "seats": [
+        "H3",
+        "H4"
+      ],
+      "seatPrice": 100,
+      "serviceFee": 50,
+      "total": 250,
+      "status": "confirmed",
+      "paymentAttempts": 0,
+      "paymobOrderId": null,
+      "xpaySessionId": null,
+      "createdAt": "2026-08-26T22:32:15.017Z"
+    },
+    {
+      "id": "bk30",
+      "userId": null,
+      "customerName": "XPay Test",
+      "customerPhone": "01012345678",
+      "showtimeId": "st1",
+      "movieId": "m1",
+      "date": "2026-08-23",
+      "time": "12:00",
+      "hall": "3",
+      "format": "IMAX",
+      "seats": [
+        "D5"
+      ],
+      "seatPrice": 100,
+      "serviceFee": 50,
+      "total": 150,
+      "status": "cancelled",
+      "paymentAttempts": 1,
+      "paymobOrderId": null,
+      "xpaySessionId": null,
+      "createdAt": "2026-08-26T22:36:54.643Z"
+    },
+    {
+      "id": "bk31",
+      "userId": null,
+      "customerName": "XPay Final Test",
+      "customerPhone": "01012345678",
+      "showtimeId": "st1",
+      "movieId": "m1",
+      "date": "2026-08-23",
+      "time": "12:00",
+      "hall": "3",
+      "format": "IMAX",
+      "seats": [
+        "D6"
+      ],
+      "seatPrice": 100,
+      "serviceFee": 50,
+      "total": 150,
+      "status": "cancelled",
+      "paymentAttempts": 1,
+      "paymobOrderId": "cs_test_7BMapvkPIAgaZT0hc6V9bu",
+      "xpaySessionId": "cs_test_7BMapvkPIAgaZT0hc6V9bu",
+      "createdAt": "2026-08-26T22:39:40.542Z"
+    },
+    {
+      "id": "bk32",
+      "userId": 1,
+      "customerName": "Future_Admin",
+      "customerPhone": "01221979424",
+      "showtimeId": "st67",
+      "movieId": "m3",
+      "date": "2026-08-26",
+      "time": "23:59",
+      "hall": "1",
+      "format": "IMAX",
+      "seats": [
+        "D10"
+      ],
+      "seatPrice": 100,
+      "serviceFee": 50,
+      "total": 150,
+      "status": "confirmed",
+      "paymentAttempts": 1,
+      "paymobOrderId": "cs_test_40GMeyGJnfxVSUSJDWE2aH",
+      "xpaySessionId": "cs_test_40GMeyGJnfxVSUSJDWE2aH",
+      "createdAt": "2026-08-26T22:42:17.276Z",
+      "paidAt": "2026-08-26T22:42:33.531Z"
+    },
+    {
+      "id": "bk33",
+      "userId": 1,
+      "customerName": "Future_Admin",
+      "customerPhone": "01221979424",
+      "showtimeId": "st16",
+      "movieId": "m1",
+      "date": "2026-08-26",
+      "time": "21:30",
+      "hall": "2",
+      "format": "IMAX",
+      "seats": [
+        "D6",
+        "D7"
+      ],
+      "seatPrice": 100,
+      "serviceFee": 50,
+      "total": 250,
+      "status": "confirmed",
+      "paymentAttempts": 1,
+      "paymobOrderId": "cs_test_6UL3zhIOkT81mqpE5xJXHE",
+      "xpaySessionId": "cs_test_6UL3zhIOkT81mqpE5xJXHE",
+      "createdAt": "2026-08-26T22:44:54.066Z",
+      "paidAt": "2026-08-26T22:45:10.993Z"
+    }
+  ],
+  "nextIds": {
+    "user": 33,
+    "movie": 17,
+    "showtime": 256,
+    "booking": 36,
+    "concession": 8,
+    "coupon": 2
+  },
+  "otpCodes": {
+    "qrt@t.com": {
+      "hash": "$2a$08$qUK5jkJd07ijp/8laAp8veBOfBhF0VrjIJztTsAz4uINaOGaoNwtq",
+      "expiresAt": 1787452822646,
+      "attempts": 0
+    }
+  },
+  "halls": [
+    {
+      "id": "1",
+      "name": "1",
+      "rows": 8,
+      "cols": 12,
+      "vipRows": [
+        "A"
+      ],
+      "capacity": 96
+    },
+    {
+      "id": "2",
+      "name": "2",
+      "rows": 6,
+      "cols": 10,
+      "vipRows": [
+        "A"
+      ],
+      "capacity": 60
+    },
+    {
+      "id": "3",
+      "name": "3",
+      "rows": 10,
+      "cols": 14,
+      "vipRows": [
+        "A",
+        "B"
+      ],
+      "capacity": 140
+    },
+    {
+      "id": "4",
+      "name": "4",
+      "rows": 7,
+      "cols": 12,
+      "vipRows": [
+        "A"
+      ],
+      "capacity": 84
+    }
+  ],
+  "concessions": [
+    {
+      "id": "pop_sm",
+      "name": {
+        "en": "Popcorn Small",
+        "ar": "فشار صغير"
+      },
+      "price": 50,
+      "image": null
+    },
+    {
+      "id": "pop_md",
+      "name": {
+        "en": "Popcorn Medium",
+        "ar": "فشار وسط"
+      },
+      "price": 80,
+      "image": null
+    },
+    {
+      "id": "pop_lg",
+      "name": {
+        "en": "Popcorn Large",
+        "ar": "فشار كبير"
+      },
+      "price": 110,
+      "image": null
+    },
+    {
+      "id": "nachos",
+      "name": {
+        "en": "Nachos",
+        "ar": "ناتشوز"
+      },
+      "price": 70,
+      "image": null
+    },
+    {
+      "id": "soda",
+      "name": {
+        "en": "Soda",
+        "ar": "مشروب غازي"
+      },
+      "price": 40,
+      "image": null
+    },
+    {
+      "id": "water",
+      "name": {
+        "en": "Water",
+        "ar": "مياه"
+      },
+      "price": 30,
+      "image": null
+    }
+  ],
+  "coupons": [
+    {
+      "code": "FUTURE20",
+      "discount": 0.2,
+      "type": "percent",
+      "active": true,
+      "expiresAt": null,
+      "minAmount": 0
+    }
+  ]
+}

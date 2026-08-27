@@ -1,0 +1,3 @@
+# SPA fallback — API is called via VITE_API_URL (src/api.js), no proxy.
+# To use a proxy instead, set redirects in netlify.toml with your real backend URL.
+/*    /index.html   200
