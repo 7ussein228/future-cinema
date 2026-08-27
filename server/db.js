@@ -4,7 +4,9 @@ import { fileURLToPath } from 'url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const isNetlify = !!process.env.NETLIFY
-const DATA_DIR = isNetlify ? path.join('/tmp', 'data') : path.join(__dirname, 'data')
+const isVercel = !!process.env.VERCEL
+const isRender = !!process.env.RENDER || !!process.env.RENDER_EXTERNAL_HOSTNAME
+const DATA_DIR = isVercel ? path.join('/tmp', 'data') : isNetlify ? path.join('/tmp', 'data') : isRender ? path.join(__dirname, 'data') : path.join(__dirname, 'data')
 const DB_FILE = path.join(DATA_DIR, 'db.json')
 
 export const DEFAULT_HALLS = [

@@ -16,17 +16,27 @@ import { getDb } from './db.js'
 export const app = express()
 const PORT = process.env.PORT || 3001
 
-app.use(cors())
+const allowedOrigins = [
+  process.env.CLIENT_URL,
+  'http://localhost:5173',
+  'http://localhost:3000'
+].filter(Boolean)
+
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true
+}))
 app.use(express.json({ limit: '6mb' }))
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const isRender = !!process.env.RENDER || !!process.env.RENDER_EXTERNAL_HOSTNAME
-const UPLOADS_DIR = process.env.NETLIFY ? path.join('/tmp', 'uploads') : isRender ? path.join(__dirname, 'data', 'uploads') : path.join(__dirname, 'uploads')
+const isVercel = !!process.env.VERCEL
+const UPLOADS_DIR = isVercel ? path.join('/tmp', 'uploads') : process.env.NETLIFY ? path.join('/tmp', 'uploads') : isRender ? path.join(__dirname, 'data', 'uploads') : path.join(__dirname, 'uploads')
 fs.mkdirSync(UPLOADS_DIR, { recursive: true })
 app.use('/uploads', express.static(UPLOADS_DIR, { maxAge: '7d' }))
 
 app.get('/api/health', (req, res) => {
-  res.json({ ok: true, name: 'Seaway Suez API' })
+  res.json({ ok: true, name: 'Future Cinema API' })
 })
 
 app.get('/api/halls', (req, res) => {
