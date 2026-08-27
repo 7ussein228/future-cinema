@@ -21,5 +21,6 @@ services:
         sync: false
     healthCheckPath: /api/health
     disk:
+      name: future-data
       mountPath: /opt/render/project/src/server/data
       sizeGB: 1
