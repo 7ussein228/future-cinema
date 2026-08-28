@@ -74,6 +74,13 @@ function runMigrations(d) {
     d.coupons = DEFAULT_COUPONS
     if (!d.nextIds) d.nextIds = {}
     d.nextIds.coupon = 2
+  } else {
+    // دمج الكوبونات الافتراضية (مثل RORO100) إذا كانت ناقصة من الـ db القائم
+    for (const def of DEFAULT_COUPONS) {
+      if (!d.coupons.some(c => c.code === def.code)) {
+        d.coupons.push({ ...def })
+      }
+    }
   }
   if (!d.nextIds) d.nextIds = {}
   if (d.nextIds.concession == null) d.nextIds.concession = (d.concessions?.length || 6) + 1
