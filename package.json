@@ -1,9 +1,19 @@
 {
-  "name": "cinema-vox-clone",
+  "name": "future-cinema",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev:server": "cd server && npm start",
     "dev:client": "cd client && npm run dev"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^17.4.2",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "nodemailer": "^9.0.5",
+    "serverless-http": "^3.2.0"
   }
 }

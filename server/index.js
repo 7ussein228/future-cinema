@@ -85,7 +85,7 @@ app.use((err, req, res, next) => {
 
 export default app
 
-if (!process.env.NETLIFY) {
+if (!process.env.NETLIFY && !process.env.VERCEL) {
   seed().then(() => {
     app.listen(PORT, () => {
       console.log(`CineVox API listening on http://localhost:${PORT}`)
