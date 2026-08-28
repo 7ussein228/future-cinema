@@ -12,6 +12,7 @@ import paymobRoutes from './routes/paymob.js'
 import xpayRoutes from './routes/xpay.js'
 import { seed } from './seed.js'
 import { getDb, initDb } from './db.js'
+import { hasSupabase, supabase } from './supabase.js'
 
 export const app = express()
 const PORT = process.env.PORT || 3001
@@ -45,7 +46,14 @@ if (isVercel) {
 }
 
 app.get('/api/health', (req, res) => {
-  res.json({ ok: true, name: 'Future Cinema API' })
+  res.json({
+    ok: true,
+    name: 'Future Cinema API',
+    supabase: hasSupabase,
+    supabaseUrl: process.env.SUPABASE_URL?.slice(0, 30),
+    hasUrl: !!process.env.SUPABASE_URL,
+    hasKey: !!process.env.SUPABASE_ANON_KEY
+  })
 })
 
 app.get('/api/halls', (req, res) => {
