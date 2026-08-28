@@ -16,24 +16,32 @@ import { getDb } from './db.js'
 export const app = express()
 const PORT = process.env.PORT || 3001
 
-const allowedOrigins = [
-  process.env.CLIENT_URL,
-  'http://localhost:5173',
-  'http://localhost:3000'
-].filter(Boolean)
-
 app.use(cors({
-  origin: allowedOrigins,
+  origin: true,
   credentials: true
 }))
 app.use(express.json({ limit: '6mb' }))
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url))
-const isRender = !!process.env.RENDER || !!process.env.RENDER_EXTERNAL_HOSTNAME
+let seedPromise = null
+function ensureSeeded() {
+  if (!seedPromise) seedPromise = seed()
+  return seedPromise
+}
+
 const isVercel = !!process.env.VERCEL
+const isRender = !!process.env.RENDER || !!process.env.RENDER_EXTERNAL_HOSTNAME
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const UPLOADS_DIR = isVercel ? path.join('/tmp', 'uploads') : process.env.NETLIFY ? path.join('/tmp', 'uploads') : isRender ? path.join(__dirname, 'data', 'uploads') : path.join(__dirname, 'uploads')
 fs.mkdirSync(UPLOADS_DIR, { recursive: true })
 app.use('/uploads', express.static(UPLOADS_DIR, { maxAge: '7d' }))
+
+if (isVercel) {
+  app.use(async (req, res, next) => {
+    try { await ensureSeeded() } catch (e) { console.error('seed error', e) }
+    next()
+  })
+}
 
 app.get('/api/health', (req, res) => {
   res.json({ ok: true, name: 'Future Cinema API' })
@@ -86,7 +94,7 @@ app.use((err, req, res, next) => {
 export default app
 
 if (!process.env.NETLIFY && !process.env.VERCEL) {
-  seed().then(() => {
+  ensureSeeded().then(() => {
     app.listen(PORT, () => {
       console.log(`CineVox API listening on http://localhost:${PORT}`)
     })
