@@ -11,7 +11,7 @@ import adminRoutes from './routes/admin.js'
 import paymobRoutes from './routes/paymob.js'
 import xpayRoutes from './routes/xpay.js'
 import { seed } from './seed.js'
-import { getDb } from './db.js'
+import { getDb, initDb } from './db.js'
 
 export const app = express()
 const PORT = process.env.PORT || 3001
@@ -23,7 +23,8 @@ app.use(cors({
 app.use(express.json({ limit: '6mb' }))
 
 let seedPromise = null
-function ensureSeeded() {
+async function ensureSeeded() {
+  await initDb()
   if (!seedPromise) seedPromise = seed()
   return seedPromise
 }

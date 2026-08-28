@@ -1,11 +1,14 @@
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
+import { supabase, hasSupabase } from './supabase.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
+
 const isNetlify = !!process.env.NETLIFY
 const isVercel = !!process.env.VERCEL
 const isRender = !!process.env.RENDER || !!process.env.RENDER_EXTERNAL_HOSTNAME
+
 const DATA_DIR = isVercel ? path.join('/tmp', 'data') : isNetlify ? path.join('/tmp', 'data') : isRender ? path.join(__dirname, 'data') : path.join(__dirname, 'data')
 const DB_FILE = path.join(DATA_DIR, 'db.json')
 
@@ -31,68 +34,160 @@ export const DEFAULT_COUPONS = [
 
 let db = null
 
+function getDefaultDb() {
+  return {
+    users: [],
+    movies: [],
+    showtimes: [],
+    bookings: [],
+    halls: DEFAULT_HALLS,
+    concessions: DEFAULT_CONCESSIONS,
+    coupons: DEFAULT_COUPONS,
+    nextIds: { user: 1, movie: 1, showtime: 1, booking: 1, concession: 7, coupon: 2 }
+  }
+}
+
+function runMigrations(d) {
+  if (!d.halls || !Array.isArray(d.halls) || d.halls.length === 0) {
+    d.halls = DEFAULT_HALLS
+  } else {
+    for (const h of d.halls) {
+      if (!h.vipRows) h.vipRows = ['A']
+      if (!h.capacity) h.capacity = h.rows * h.cols
+    }
+  }
+  if (Array.isArray(d.showtimes)) {
+    for (const s of d.showtimes) {
+      if (s.price == null) {
+        const fmt = s.format || '2D'
+        s.price = fmt === 'IMAX' ? 150 : fmt === '3D' ? 120 : 100
+      }
+    }
+  }
+  if (!d.concessions || !Array.isArray(d.concessions) || d.concessions.length === 0) {
+    d.concessions = DEFAULT_CONCESSIONS
+    if (!d.nextIds) d.nextIds = {}
+    d.nextIds.concession = 7
+  }
+  if (!d.coupons || !Array.isArray(d.coupons) || d.coupons.length === 0) {
+    d.coupons = DEFAULT_COUPONS
+    if (!d.nextIds) d.nextIds = {}
+    d.nextIds.coupon = 2
+  }
+  if (!d.nextIds) d.nextIds = {}
+  if (d.nextIds.concession == null) d.nextIds.concession = (d.concessions?.length || 6) + 1
+  if (d.nextIds.coupon == null) d.nextIds.coupon = (d.coupons?.length || 1) + 1
+  if (d.nextIds.user == null) d.nextIds.user = (d.users?.length || 0) + 1
+  if (d.nextIds.movie == null) d.nextIds.movie = (d.movies?.length || 0) + 1
+  if (d.nextIds.showtime == null) d.nextIds.showtime = (d.showtimes?.length || 0) + 1
+  if (d.nextIds.booking == null) d.nextIds.booking = (d.bookings?.length || 0) + 1
+}
+
+async function loadFromSupabase() {
+  if (!hasSupabase) return null
+  try {
+    const { data, error } = await supabase.from('app_state').select('data').eq('id', 'main').single()
+    if (error) {
+      console.error('Supabase read error:', error.message)
+      return null
+    }
+    return data?.data || null
+  } catch (e) {
+    console.error('Supabase read failed:', e.message)
+    return null
+  }
+}
+
+function loadFromFile() {
+  try {
+    if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true })
+    if (fs.existsSync(DB_FILE)) {
+      return JSON.parse(fs.readFileSync(DB_FILE, 'utf-8'))
+    }
+  } catch (e) {
+    console.error('File read error:', e.message)
+  }
+  return null
+}
+
+function saveToFile(d) {
+  try {
+    if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true })
+    fs.writeFileSync(DB_FILE, JSON.stringify(d, null, 2))
+  } catch (e) {
+    console.error('File write error:', e.message)
+  }
+}
+
+async function saveToSupabase(d) {
+  if (!hasSupabase) return
+  try {
+    const { error } = await supabase
+      .from('app_state')
+      .upsert({ id: 'main', data: d }, { onConflict: 'id' })
+    if (error) console.error('Supabase write error:', error.message)
+  } catch (e) {
+    console.error('Supabase write failed:', e.message)
+  }
+}
+
+export async function initDb() {
+  if (db) return db
+
+  if (hasSupabase) {
+    console.log('Loading database from Supabase...')
+    db = await loadFromSupabase()
+    if (db) {
+      console.log('Database loaded from Supabase')
+      runMigrations(db)
+      return db
+    }
+    console.log('No Supabase data, creating default...')
+    db = getDefaultDb()
+    runMigrations(db)
+    await saveToSupabase(db)
+    return db
+  }
+
+  console.log('No Supabase, loading from file...')
+  db = loadFromFile()
+  if (db) {
+    runMigrations(db)
+    return db
+  }
+  db = getDefaultDb()
+  runMigrations(db)
+  saveToFile(db)
+  return db
+}
+
 export function loadDb() {
   if (db) return db
-  if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true })
-  if (fs.existsSync(DB_FILE)) {
-    db = JSON.parse(fs.readFileSync(DB_FILE, 'utf-8'))
-    // migration: ensure halls exists
-    if (!db.halls || !Array.isArray(db.halls) || db.halls.length === 0) {
-      db.halls = DEFAULT_HALLS
-      saveDb()
-    } else {
-      // ensure each hall has vipRows and capacity
-      let mutated = false
-      for (const h of db.halls) {
-        if (!h.vipRows) { h.vipRows = ['A']; mutated = true }
-        if (!h.capacity) { h.capacity = h.rows * h.cols; mutated = true }
+  if (hasSupabase) {
+    loadFromSupabase().then((data) => {
+      if (data) {
+        db = data
+        runMigrations(db)
       }
-      if (mutated) saveDb()
-    }
-    // migration: ensure existing showtimes have price
-    if (Array.isArray(db.showtimes)) {
-      let mutated = false
-      for (const s of db.showtimes) {
-        if (s.price == null) {
-          // default price by format fallback
-          const fmt = s.format || '2D'
-          s.price = fmt === 'IMAX' ? 150 : fmt === '3D' ? 120 : 100
-          mutated = true
-        }
-      }
-      if (mutated) saveDb()
-    }
+    })
   } else {
-    db = {
-      users: [],
-      movies: [],
-      showtimes: [],
-      bookings: [],
-      halls: DEFAULT_HALLS,
-      concessions: DEFAULT_CONCESSIONS,
-      coupons: DEFAULT_COUPONS,
-      nextIds: { user: 1, movie: 1, showtime: 1, booking: 1, concession: 7, coupon: 2 }
+    db = loadFromFile()
+    if (db) {
+      runMigrations(db)
     }
-    saveDb()
   }
-  // migration: ensure concessions exists
-  if (!db.concessions || !Array.isArray(db.concessions) || db.concessions.length === 0) {
-    db.concessions = DEFAULT_CONCESSIONS
-    if (!db.nextIds.concession) db.nextIds.concession = 7
-    saveDb()
+  if (!db) {
+    db = getDefaultDb()
+    runMigrations(db)
   }
-  if (!db.coupons || !Array.isArray(db.coupons) || db.coupons.length === 0) {
-    db.coupons = DEFAULT_COUPONS
-    if (!db.nextIds.coupon) db.nextIds.coupon = 2
-    saveDb()
-  }
-  if (db.nextIds && db.nextIds.concession == null) { db.nextIds.concession = (db.concessions?.length || 6) + 1; saveDb() }
-  if (db.nextIds && db.nextIds.coupon == null) { db.nextIds.coupon = (db.coupons?.length || 1) + 1; saveDb() }
   return db
 }
 
 export function saveDb() {
-  fs.writeFileSync(DB_FILE, JSON.stringify(db, null, 2))
+  if (hasSupabase) {
+    saveToSupabase(db)
+  }
+  saveToFile(db)
 }
 
 export function getDb() {
@@ -101,6 +196,7 @@ export function getDb() {
 
 export function nextId(collection) {
   const d = getDb()
+  if (!d.nextIds) d.nextIds = {}
   const id = d.nextIds[collection] || 1
   d.nextIds[collection] = id + 1
   saveDb()
