@@ -43,7 +43,7 @@ export default function Booking() {
   const [couponValidating, setCouponValidating] = useState(false)
 
   const seatPrice = Number(showtime?.price) || 100
-  const serviceFee = 50
+  const serviceFee = 0
 
   useEffect(() => {
     axios.get(`/api/showtimes/${showtimeId}`).then(async ({ data: st }) => {
@@ -104,7 +104,7 @@ export default function Booking() {
   }, [selectedConcessions, concessions])
 
   const seatsTotal = selected.length * seatPrice
-  const subtotal = seatsTotal + concessionsTotal + (selected.length ? serviceFee : 0)
+  const subtotal = seatsTotal + concessionsTotal
   const total = Math.max(0, subtotal - discountAmount)
   const hallConfig = getHallById(showtime?.hall || '1')
 
@@ -448,12 +448,6 @@ export default function Booking() {
                   <div className="flex justify-between text-white/60">
                     <span>Concessions ({selectedConcessions.length})</span>
                     <span>{money(concessionsTotal)}</span>
-                  </div>
-                )}
-                {selected.length > 0 && (
-                  <div className="flex justify-between text-white/60">
-                    <span>{t('booking.serviceFee')}</span>
-                    <span>{money(serviceFee)}</span>
                   </div>
                 )}
                 {discountAmount > 0 && (

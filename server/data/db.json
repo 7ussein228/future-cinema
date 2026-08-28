@@ -3623,6 +3623,14 @@
       "active": true,
       "expiresAt": null,
       "minAmount": 0
+    },
+    {
+      "code": "RORO100",
+      "type": "seats_free",
+      "maxSeats": 2,
+      "active": true,
+      "expiresAt": null,
+      "minAmount": 0
     }
   ]
 }

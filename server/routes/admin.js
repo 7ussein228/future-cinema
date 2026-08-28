@@ -381,12 +381,12 @@ router.post('/cashier/bookings', authRequired, adminOrCashier, (req, res) => {
     couponObj = (db.coupons || []).find(c => c.code === couponCode)
     if (!couponObj || !couponObj.active) return res.status(400).json({ message: 'Invalid coupon' })
     if (couponObj.expiresAt && new Date(couponObj.expiresAt).getTime() < Date.now()) return res.status(400).json({ message: 'Coupon expired' })
-    const subtotal = seats.length * seatPrice + concessionsTotal + serviceFee
+    const subtotal = seats.length * seatPrice + concessionsTotal
     if ((couponObj.minAmount || 0) > subtotal) return res.status(400).json({ message: `Coupon requires minimum ${couponObj.minAmount} EGP` })
     if (couponObj.type === 'percent') discountAmount = Math.round(subtotal * couponObj.discount)
     else discountAmount = Math.min(couponObj.discount, subtotal)
   }
-  const subtotal = seats.length * seatPrice + concessionsTotal + serviceFee
+  const subtotal = seats.length * seatPrice + concessionsTotal
   const total = Math.max(0, subtotal - discountAmount)
   const paid = method === 'cash' ? Number(amountPaid) || 0 : total
   if (method === 'cash' && paid < total) {

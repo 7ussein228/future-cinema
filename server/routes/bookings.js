@@ -49,7 +49,7 @@ function releaseStalePending(db) {
   }
 }
 
-function validateCoupon(db, code, subtotal) {
+function validateCoupon(db, code, subtotal, seatPrice, seatCount) {
   if (!code) return { coupon: null, discountAmount: 0 }
   const couponCode = String(code).trim().toUpperCase()
   if (!couponCode) return { coupon: null, discountAmount: 0 }
@@ -58,8 +58,16 @@ function validateCoupon(db, code, subtotal) {
   if (coupon.expiresAt && new Date(coupon.expiresAt).getTime() < Date.now()) throw Object.assign(new Error('Coupon expired'), { status: 400 })
   if ((coupon.minAmount || 0) > subtotal) throw Object.assign(new Error(`Coupon requires minimum ${coupon.minAmount} EGP`), { status: 400 })
   let discount = 0
-  if (coupon.type === 'percent') discount = Math.round(subtotal * coupon.discount)
-  else discount = Math.min(coupon.discount, subtotal)
+  if (coupon.type === 'seats_free') {
+    // خصم كامل على الكراسي بحد أقصى (maxSeats) كرسي
+    const maxSeats = Number(coupon.maxSeats) > 0 ? Number(coupon.maxSeats) : 2
+    const n = Math.max(0, Number(seatCount) || 0)
+    discount = Math.min(n, maxSeats) * (Number(seatPrice) || 0)
+  } else if (coupon.type === 'percent') {
+    discount = Math.round(subtotal * coupon.discount)
+  } else {
+    discount = Math.min(coupon.discount, subtotal)
+  }
   return { coupon: coupon.code, discountAmount: discount, couponObj: coupon }
 }
 
@@ -78,13 +86,18 @@ router.post('/validate-coupon', (req, res) => {
       }
     }
     let seatsTotal = 0
-    let serviceFee = 50
+    let seatPrice = 0
+    const serviceFee = 0
     if (showtimeId && Array.isArray(seats)) {
       const showtime = db.showtimes.find(s => s.id === showtimeId)
-      if (showtime) seatsTotal = seats.length * (Number(showtime.price) || 100)
+      if (showtime) {
+        seatPrice = Number(showtime.price) || 100
+        seatsTotal = seats.length * seatPrice
+      }
     }
-    const subtotal = seatsTotal + concessionsTotal + (seatsTotal || concessionsTotal ? serviceFee : 0)
-    const { coupon, discountAmount, couponObj } = validateCoupon(db, code, subtotal || Number(code && db.coupons?.find(c=>c.code===String(code).toUpperCase())?.minAmount || 0))
+    const seatCount = Array.isArray(seats) ? seats.length : 0
+    const subtotal = seatsTotal + concessionsTotal
+    const { coupon, discountAmount, couponObj } = validateCoupon(db, code, subtotal || Number(code && db.coupons?.find(c=>c.code===String(code).toUpperCase())?.minAmount || 0), seatPrice, seatCount)
     if (!coupon) return res.status(400).json({ valid: false, message: 'Invalid coupon' })
     res.json({ valid: true, coupon, discountAmount, discount: couponObj.discount, type: couponObj.type })
   } catch (e) {
@@ -123,7 +136,7 @@ router.post('/', optionalAuth, async (req, res) => {
   }
 
   const seatPrice = Number(showtime.price) || 100
-  const serviceFee = 50
+  const serviceFee = 0
   // concessions
   const concessionIds = Array.isArray(concessions) ? concessions : []
   const concessionMap = new Map((db.concessions || []).map(c => [c.id, c]))
@@ -131,12 +144,12 @@ router.post('/', optionalAuth, async (req, res) => {
   if (invalidConcessions.length) return res.status(400).json({ message: `Invalid concessions: ${invalidConcessions.join(', ')}` })
   const concessionsTotal = concessionIds.reduce((sum, id) => sum + (concessionMap.get(String(id))?.price || 0), 0)
   const concessionItems = concessionIds.map(id => concessionMap.get(String(id))).filter(Boolean)
-  const subtotal = seats.length * seatPrice + concessionsTotal + serviceFee
+  const subtotal = seats.length * seatPrice + concessionsTotal
   let couponCode = null
   let discountAmount = 0
   if (coupon) {
     try {
-      const validated = validateCoupon(db, coupon, subtotal)
+      const validated = validateCoupon(db, coupon, subtotal, seatPrice, seats.length)
       couponCode = validated.coupon
       discountAmount = validated.discountAmount
     } catch (e) {
