@@ -1,4 +1,11 @@
-import serverless from 'serverless-http'
 import app from '../server/index.js'
 
-export default serverless(app)
+export default function handler(req, res) {
+  return app(req, res)
+}
+
+export const config = {
+  api: {
+    bodyParser: false
+  }
+}
