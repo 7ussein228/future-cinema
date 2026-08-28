@@ -3625,7 +3625,7 @@
       "minAmount": 0
     },
     {
-      "code": "RORO100",
+      "code": "RORO175",
       "type": "seats_free",
       "maxSeats": 2,
       "active": true,

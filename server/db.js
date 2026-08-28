@@ -30,7 +30,7 @@ export const DEFAULT_CONCESSIONS = [
 
 export const DEFAULT_COUPONS = [
   { code: 'FUTURE20', discount: 0.2, type: 'percent', active: true, expiresAt: null, minAmount: 0 },
-  { code: 'RORO100', type: 'seats_free', maxSeats: 2, active: true, expiresAt: null, minAmount: 0 }
+  { code: 'RORO175', type: 'seats_free', maxSeats: 2, active: true, expiresAt: null, minAmount: 0 }
 ]
 
 let db = null
