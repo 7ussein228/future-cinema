@@ -141,6 +141,7 @@ export async function initDb() {
     if (db) {
       console.log('Database loaded from Supabase')
       runMigrations(db)
+      await saveToSupabase(db)
       return db
     }
     console.log('No Supabase data, creating default...')
@@ -169,6 +170,7 @@ export function loadDb() {
       if (data) {
         db = data
         runMigrations(db)
+        saveToSupabase(db)
       }
     })
   } else {
