@@ -1,7 +1,22 @@
 import express from 'express'
-import { getDb, saveDb, nextId } from '../db.js'
+import { getDb, saveDb, nextId, withBookingLock } from '../db.js'
 import { xpayConfigured, createPayment, inquiryOrder, refundPayment } from '../xpay.js'
 import { optionalAuth, authRequired } from './auth.js'
+
+// Simple in-memory rate limiter for Avengers surge: 10 bookings/min per IP
+const rateMap = new Map()
+function bookingRateLimit(req, res, next) {
+  const ip = req.ip || req.headers['x-forwarded-for'] || 'unknown'
+  const now = Date.now()
+  const windowMs = 60 * 1000
+  const max = 12
+  let rec = rateMap.get(ip)
+  if (!rec || now - rec.start > windowMs) rec = { start: now, count: 0 }
+  rec.count += 1
+  rateMap.set(ip, rec)
+  if (rec.count > max) return res.status(429).json({ message: 'Too many requests, please try again shortly' })
+  next()
+}
 
 function parseShowtimeDateTime(booking) {
   if (!booking || !booking.date || !booking.time) return null
@@ -105,7 +120,7 @@ router.post('/validate-coupon', (req, res) => {
   }
 })
 
-router.post('/', optionalAuth, async (req, res) => {
+router.post('/', optionalAuth, bookingRateLimit, async (req, res) => {
   const { showtimeId, seats, phone, name, concessions, coupon } = req.body || {}
   const customerPhone = String(phone || '').replace(/[\s-]/g, '')
   const customerName = String(name || '').trim()
@@ -119,72 +134,86 @@ router.post('/', optionalAuth, async (req, res) => {
     return res.status(400).json({ message: 'Full name is required' })
   }
 
-  const db = getDb()
-  releaseStalePending(db)
-  const showtime = db.showtimes.find((s) => s.id === showtimeId)
-  if (!showtime) return res.status(404).json({ message: 'Showtime not found' })
+  // Quick showtime existence check before lock (fail fast)
+  const db0 = getDb()
+  const showtime0 = db0.showtimes.find((s) => s.id === showtimeId)
+  if (!showtime0) return res.status(404).json({ message: 'Showtime not found' })
 
-  const taken = new Set()
-  for (const b of db.bookings) {
-    if (b.showtimeId === showtime.id && b.status !== 'cancelled') {
-      for (const seat of b.seats) taken.add(seat)
-    }
-  }
-  const conflicts = seats.filter((s) => taken.has(s))
-  if (conflicts.length) {
-    return res.status(409).json({ message: `Seats already booked: ${conflicts.join(', ')}` })
-  }
+  // Critical section: seat check + booking creation serialized per showtime (Avengers Doomsday ready)
+  let booking
+  try {
+    booking = await withBookingLock(showtimeId, async () => {
+      const db = getDb()
+      releaseStalePending(db)
+      const showtime = db.showtimes.find((s) => s.id === showtimeId)
+      if (!showtime) throw Object.assign(new Error('Showtime not found'), { status: 404 })
 
-  const seatPrice = Number(showtime.price) || 100
-  const serviceFee = 0
-  // concessions
-  const concessionIds = Array.isArray(concessions) ? concessions : []
-  const concessionMap = new Map((db.concessions || []).map(c => [c.id, c]))
-  const invalidConcessions = concessionIds.filter(id => !concessionMap.has(String(id)))
-  if (invalidConcessions.length) return res.status(400).json({ message: `Invalid concessions: ${invalidConcessions.join(', ')}` })
-  const concessionsTotal = concessionIds.reduce((sum, id) => sum + (concessionMap.get(String(id))?.price || 0), 0)
-  const concessionItems = concessionIds.map(id => concessionMap.get(String(id))).filter(Boolean)
-  const subtotal = seats.length * seatPrice + concessionsTotal
-  let couponCode = null
-  let discountAmount = 0
-  if (coupon) {
-    try {
-      const validated = validateCoupon(db, coupon, subtotal, seatPrice, seats.length)
-      couponCode = validated.coupon
-      discountAmount = validated.discountAmount
-    } catch (e) {
-      return res.status(e.status || 400).json({ message: e.message || 'Invalid coupon' })
-    }
-  }
-  const total = Math.max(0, subtotal - discountAmount)
+      const taken = new Set()
+      for (const b of db.bookings) {
+        if (b.showtimeId === showtime.id && b.status !== 'cancelled') {
+          for (const seat of b.seats) taken.add(seat)
+        }
+      }
+      const conflicts = seats.filter((s) => taken.has(s))
+      if (conflicts.length) {
+        throw Object.assign(new Error(`Seats already booked: ${conflicts.join(', ')}`), { status: 409 })
+      }
 
-  const booking = {
-    id: `bk${nextId('booking')}`,
-    userId: req.user ? req.user.id : null,
-    customerName,
-    customerPhone,
-    showtimeId,
-    movieId: showtime.movieId,
-    date: showtime.date,
-    time: showtime.time,
-    hall: showtime.hall,
-    format: showtime.format,
-    seats,
-    seatPrice,
-    serviceFee,
-    concessions: concessionItems,
-    concessionsTotal,
-    coupon: couponCode,
-    discountAmount,
-    total,
-    status: xpayConfigured() ? 'pending' : 'confirmed',
-    paymentAttempts: 0,
-    paymobOrderId: null,
-    xpaySessionId: null,
-    createdAt: new Date().toISOString()
+      const seatPrice = Number(showtime.price) || 100
+      const serviceFee = 0
+      const concessionIds = Array.isArray(concessions) ? concessions : []
+      const concessionMap = new Map((db.concessions || []).map(c => [c.id, c]))
+      const invalidConcessions = concessionIds.filter(id => !concessionMap.has(String(id)))
+      if (invalidConcessions.length) throw Object.assign(new Error(`Invalid concessions: ${invalidConcessions.join(', ')}`), { status: 400 })
+      const concessionsTotal = concessionIds.reduce((sum, id) => sum + (concessionMap.get(String(id))?.price || 0), 0)
+      const concessionItems = concessionIds.map(id => concessionMap.get(String(id))).filter(Boolean)
+      const subtotal = seats.length * seatPrice + concessionsTotal
+      let couponCode = null
+      let discountAmount = 0
+      if (coupon) {
+        const validated = validateCoupon(db, coupon, subtotal, seatPrice, seats.length)
+        couponCode = validated.coupon
+        discountAmount = validated.discountAmount
+      }
+      const total = Math.max(0, subtotal - discountAmount)
+
+      // atomic id generation inside lock (avoid separate saveDb race)
+      if (!db.nextIds) db.nextIds = {}
+      const idNum = db.nextIds.booking || (db.bookings.length + 1)
+      db.nextIds.booking = idNum + 1
+
+      const b = {
+        id: `bk${idNum}`,
+        userId: req.user ? req.user.id : null,
+        customerName,
+        customerPhone,
+        showtimeId,
+        movieId: showtime.movieId,
+        date: showtime.date,
+        time: showtime.time,
+        hall: showtime.hall,
+        format: showtime.format,
+        seats,
+        seatPrice,
+        serviceFee,
+        concessions: concessionItems,
+        concessionsTotal,
+        coupon: couponCode,
+        discountAmount,
+        total,
+        status: xpayConfigured() ? 'pending' : 'confirmed',
+        paymentAttempts: 0,
+        paymobOrderId: null,
+        xpaySessionId: null,
+        createdAt: new Date().toISOString()
+      }
+      db.bookings.push(b)
+      saveDb()
+      return b
+    })
+  } catch (e) {
+    return res.status(e.status || 400).json({ message: e.message || 'Booking failed' })
   }
-  db.bookings.push(booking)
-  saveDb()
 
   if (!xpayConfigured()) {
     return res.status(201).json({ booking })

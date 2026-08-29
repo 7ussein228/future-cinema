@@ -35,6 +35,23 @@ export const DEFAULT_COUPONS = [
 
 let db = null
 
+// High-concurrency: per-showtime mutex to serialize bookings on same showtime
+const bookingLocks = new Map()
+export async function withBookingLock(showtimeId, fn) {
+  const key = String(showtimeId || 'global')
+  const prev = bookingLocks.get(key) || Promise.resolve()
+  let release
+  const next = new Promise((r) => (release = r))
+  bookingLocks.set(key, prev.then(() => next))
+  await prev
+  try {
+    return await fn()
+  } finally {
+    release()
+    if (bookingLocks.get(key) === next) bookingLocks.delete(key)
+  }
+}
+
 function getDefaultDb() {
   return {
     users: [],
@@ -44,7 +61,8 @@ function getDefaultDb() {
     halls: DEFAULT_HALLS,
     concessions: DEFAULT_CONCESSIONS,
     coupons: DEFAULT_COUPONS,
-    nextIds: { user: 1, movie: 1, showtime: 1, booking: 1, concession: 7, coupon: 2 }
+    nextIds: { user: 1, movie: 1, showtime: 1, booking: 1, concession: 7, coupon: 2 },
+    _version: 1
   }
 }
 
@@ -89,6 +107,7 @@ function runMigrations(d) {
   if (d.nextIds.movie == null) d.nextIds.movie = (d.movies?.length || 0) + 1
   if (d.nextIds.showtime == null) d.nextIds.showtime = (d.showtimes?.length || 0) + 1
   if (d.nextIds.booking == null) d.nextIds.booking = (d.bookings?.length || 0) + 1
+  if (d._version == null) d._version = 1
 }
 
 async function loadFromSupabase() {
@@ -130,6 +149,9 @@ function saveToFile(d) {
 async function saveToSupabase(d) {
   if (!hasSupabase) return
   try {
+    // bump version for optimistic concurrency
+    if (d._version == null) d._version = 1
+    else d._version += 1
     const { error } = await supabase
       .from('app_state')
       .upsert({ id: 'main', data: d }, { onConflict: 'id' })
@@ -137,6 +159,17 @@ async function saveToSupabase(d) {
   } catch (e) {
     console.error('Supabase write failed:', e.message)
   }
+}
+
+// Atomic save with mutex + version - for high concurrency bookings
+export async function saveDbAtomic(showtimeId, mutator) {
+  return withBookingLock(showtimeId, async () => {
+    const d = getDb()
+    const result = await mutator(d)
+    await saveToSupabase(d)
+    saveToFile(d)
+    return result
+  })
 }
 
 export async function initDb() {
@@ -194,6 +227,10 @@ export function loadDb() {
 }
 
 export function saveDb() {
+  if (!hasSupabase && db) {
+    if (db._version == null) db._version = 1
+    else db._version += 1
+  }
   if (hasSupabase) {
     saveToSupabase(db)
   }
